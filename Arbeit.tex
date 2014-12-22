@@ -1,0 +1,252 @@
+\documentclass[
+    11pt,
+    ngerman
+]{scrreprt}
+
+\input{header.tex}
+
+\author{Lino Lemmer}
+\subject{Bachelorarbeit in Physik }
+\title{Brustkrebsdiagnose durch ultraschallinduzierte Gewebeverschiebung}
+\subtitle{Optimierung von Messverfahren und Bildertrag}
+\publishers{Vorgelegt der Rheinischen Friedrich-Wilhelms-Universität Bonn}
+
+
+
+\begin{document}
+\maketitle
+
+
+\tableofcontents
+
+\chapter{Einleitung}
+
+\chapter{Physikalische Grundlagen}
+
+\section{Ultraschall}
+
+\subsection{Grundlagen}
+
+\subsection{Erzeugung}
+
+\section{Magnet-Resonanz-Tomographie}
+
+\subsection{Kernspinresonanz}
+
+\subsection{Relaxation}
+
+\subsection{Spin-Echo-Sequenzen}
+
+\subsection{Ortsauflösung}
+
+\section{Versuchsvorrichtung}
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        % PC
+        \draw (0,0) rectangle (1,1);
+        \draw (-.2,-.2) rectangle (1.2,1.2);
+        \draw (-.2,-.2) -- (-.4,-.4) -- (1.4,-.4) -- (1.2,-.2);
+        \node at (.5,.5) {PC};
+
+        % Kabel
+        \draw[out=0, in=180]
+            (1.2,.4) to (3,-.55)
+            (1.2,.5) to (3,.45)
+            (1.2,.6) to (3.,1.45);
+
+        % Steuerbox mit Schrittmotoren
+        \draw (3.,-1.1) rectangle (7,2);
+        \foreach \y in {-1.0,0,1}
+        \draw (3,\y) rectangle node{1} (4,\y+.9);
+
+        % Kolben
+        % Kolben 1
+        \draw (4, -.7) rectangle (5.5,-.4);
+        \draw[ultra thick] (4,-.55) -- (4.5,-.55);
+        \draw (4.5,-.7) rectangle (4.6,-.4);
+
+        % Kolben 2
+        \draw (4, .3) rectangle (6.8,.6);
+        \draw[ultra thick] (4,.45) -- (4.5,.45);
+        \draw (4.5,.3) rectangle (4.6,.6);
+
+        % Kolben 3
+        \draw (4, 1.3) rectangle (5.,1.6);
+        \draw[ultra thick] (4,1.45) -- (4.5,1.45);
+        \draw (4.5,1.3) rectangle (4.6,1.6);
+
+        % Verschiebevorrichtung
+        \draw (8.7,-.2) rectangle (11.8,1.1);
+
+        % Kolben 2
+        \draw (8.8,.3) rectangle (11.6,.6);
+        \draw[ultra thick] (9.4,.45) -- (12,.45);
+        \draw (9.3,.3) rectangle (9.4,.6);
+
+        % Kolben 1
+        \draw (12,1.2) rectangle (12.3,-.3);
+        \draw[ultra thick] (12.15,.6) -- (12.15,-.7);
+        \draw (12,.7) rectangle (12.3,.6);
+
+        % Kolben 3
+        \draw (12.4,.9) rectangle (13.4,1.2);
+        \draw[ultra thick] (13.0,1.05) -- (13.8,1.05);
+        \draw (12.9,.9) rectangle (13.0,1.2);
+
+        % Verbindung Kolben 1, 3 Emitter und Spiegel
+        \draw (12.1,-.7) -- (12.4,-.7) -- (12.4,1.2);
+        \draw (12.4,.5) -- (12.5,.5) coordinate (a) ;
+        \draw (12.4,.8) --  (12.5,.8) coordinate (b);
+        \draw[bend left] (b) to (a);
+        \draw  ($(b)!.5!(a)$) -- (12.7,0) node[below]{4} ;
+        \draw (13.8, 1.2) -- (13.8, 0.9);
+        \draw (13.7,.9) rectangle coordinate (spiegel) (13.9,.4);
+        \draw (spiegel) -- (13.5,0) node[below]{5};
+
+        % Schläuche mit Steckverbindung und Kupplungen
+
+        \draw (5.4,-.4) to [out=90, in=-90] (6.9,.4) to [out=90, in=-90] (6.6,2) to [out=90, in=180] (7.6,2.6) -- (8.,2.6);
+        \draw[ultra thick] (7.6,2.6) -- coordinate (S1)  (7.8,2.6) ;
+        \draw (8.,2.5) rectangle coordinate (K1) (8.3,2.7);
+        \draw (8.3,2.3) -- (8.5,2.3);
+        \draw (8.6,2.3) to [out=0, in=90] (9,.6);
+
+        \draw (6.6,.6) to [out=90, in=-90] (6.5,2) to [out=90, in=180] (7.6,2.3) -- (8.,2.3);
+        \draw[ultra thick] (7.6,2.3) --  coordinate (S2) (7.8,2.3) ;
+        \draw (8.,2.4) rectangle coordinate (K2) (8.3,2.2);
+        \draw (8.3,2.6) -- (8.6,2.6);
+        \draw (8.7,2.6) to [out=0, in=90] (12.15,1.2);
+        
+        \draw (4.9,1.6) to [out=90, in=-90] (6.4,2) to [out=90, in=180] (7.6,2.9) -- (8.,2.9);
+        \draw[ultra thick] (7.6,2.9) -- coordinate (S3) (7.8,2.9);
+        \draw (8.,2.8) rectangle coordinate (K3) (8.3,3.0);
+        \draw (8.3,2.9) -- (8.7,2.9);
+        \draw (8.8,2.9) to [out=0, in=90] (12.6,1.2);
+
+        \draw (8.45,2.2) -- (8.75,3.0);
+        \draw (8.55,2.2) -- (8.85,3.0);
+
+        \node (S) at (7.5,3.8) {2};
+        \foreach \y in {(S1), (S2), (S3)}
+            \draw (S) -- \y;
+
+        \node (K) at (8.3,3.8) {3};
+        \foreach \y in {(K1), (K2), (K3)}
+            \draw (K) -- \y;
+
+        % Druckausgleich
+
+            \draw (13.,-2) rectangle node {6} (13.75,-1);
+
+            \draw (12,-.2) to [out=180, in=180] (13,-1.3);
+            \draw (11.5,.3) to [out=-90, in=180] (13,-1.4); 
+            \draw (13.3,.9) to [out=-90, in=180] (13,-1.2);
+
+        % Beschriftung
+        \node at (0,4) {\parbox{4.5cm}{
+                1: Schrittmotor \\
+                2: Steckverbindung \\
+                3: Kupplung, tropffrei \\
+                4: Ultraschallemitter \\
+                5: Spiegel \\
+                6: Druckausgleichsbehälter
+            }
+        };
+    \end{tikzpicture}
+    \caption{%
+        Verschiebevorrichtung
+    }
+    \label{fig:aufbau_total}
+\end{figure}
+
+
+\chapter{Durchführung}
+
+\section{Verbesserung der Versuchsvorrichtung}
+
+An der vorhandenen Versuchsvorrichtung bestanden zu Anfang meiner Arbeit einige
+Probleme die es zu verbessern galt. Zum Einen ließen sich die Kolben nach
+einiger Zeit des Stehens nur sehr schwergängig in ihren Zylindern bewegen.
+Damit die Schrittmotoren nicht überfordert würde musste man diese vor der
+Benutzung per Hand lockern. Zum Anderen trat Luft bei Benutzung der Apperatur
+in das System ein, wodurch nach einigem Fahren die Eichung der Verschiebung
+nicht mehr stimmte.  
+
+\subsection{Problem: Dichtungsringe}
+
+Zum abdichten waren auf den Kolben zwei O-Ringe in jeweils eine Nut
+eingelassen. Diese Nuten waren nur minimal breiter als die Schnurstärle der
+Ringe. Befand sich der Kolben nun im Zylinder wurden die Ringe stark verformt
+(Abbildung \ref{fig:nut_schmal}). Die dadurch entstehende breite Auflagefläche
+und starke Rückstellkraft sorgt für hohe Reibung. Ist die Nut breiter kann sich
+der Ring besser verformen (Abbildung \ref{fig:nut_breit}). Wird zudem noch die
+Nut tiefer gestochen, verringert sich die Verformung und damit die
+Auflagefläche und Rückstellkraft deutlich. Die Reibung schrumpft.
+
+Da wir bei unserem Versuchsaufbau mit geringen Drücken zu tun haben, reicht
+zudem eine Abdichtung mit nur einem O-Ring pro Kolben, statt der vorher
+verwendeten zwei.
+
+\begin{figure}
+\begin{minipage}[htbp]{.45\textwidth}
+    \centering
+        \begin{tikzpicture}
+            \draw (.5,0) -- (2,0) -- (2,-2.5) -- (5,-2.5) -- (5,0) -- (6.5,0) ;
+            \draw (3.5,-1.05) circle (1.43);
+            \draw[red] (.5,.07) -- (6.5,.07);
+            \foreach \x in {2.7, 3.5, 4.3} \draw[ultra thick, ->, red] (\x,-1) -- (\x,0.05);
+            \draw[red] (2.7,.05) 
+            -- (4.3,.05) 
+            arc (90:0:.68) 
+            -- (4.98,-1.8) 
+            arc (0:-90:.68)
+            -- (2.7,-2.48)
+            arc (-90:-180:.68)
+            -- (2.02,-.63)
+            arc (-180:-270:.68);
+        \end{tikzpicture}
+        \caption{%
+            Breite Auflagefläche des O-Rings bei zu schmaler Nut.
+        }
+        \label{fig:nut_schmal}
+\end{minipage}
+\hfill
+\begin{minipage}[htbp]{.45\textwidth}
+    \centering
+        \begin{tikzpicture}
+            \draw (1,0) -- (2,0) -- (2,-2.5) -- (6,-2.5) -- (6,0) -- (7,0) ;
+            \draw (4,-1.05) circle (1.43);
+            \draw[red] (1,0.07) -- (7,0.07);
+            \foreach \x in {3.5, 4.5} \draw[ultra thick, ->, red] (\x,-1) -- (\x,0.05);
+            \draw[red] (3.5,.05) 
+            -- (4.5,.05) 
+            arc (90:-90:1.26) 
+            -- (3.5,-2.48)
+            arc (-90:-270:1.26);
+        \end{tikzpicture}
+        \caption{%
+            Kleine Auflagefläche wenn die Nut deutlich breiter ist als der O-Ring.
+        }
+        \label{fig:nut_breit}
+\end{minipage}
+\end{figure}
+
+Ein weiterer Faktor ist die Wahl des Schmiermittels. Bisher wurde das
+Silikonbasierte High Vacuum Grease verwendet. Ich hab mich für eine Verwendung
+von Hochleistungs \textsc{PTFE}-Spray entschieden, da dieses auch nach längerem
+Stehen unter Druck gute Laufeigenschaften hat.
+
+
+\subsection{Problem: Kupplung}
+
+\subsection{Kalibrierung}
+
+\subsection{Messungen}
+
+\chapter{Ergebnis/Ausblick}
+
+\end{document}
+
+%vim: tw=79
