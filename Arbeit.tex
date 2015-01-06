@@ -76,9 +76,55 @@ Spinbehaftete Teilchen, wie zum Beispiel Protonen oder Neutronen haben ein magne
 \[
     \vec\mu = \gamma\vec S
 \]
-zusammenhängt. $\gamma$ ist dabei das gyromagnetische Verhältnis, welches für verschiedene Teilchen unterschiedliche Werte annimmt. Es ist leicht zu sehen, dass Spin und magnetisches Moment in die gleiche Richtung zeigen. Da in der Medizin vorallem Wasserstoffkerne eine Rolle spielen, betrachte ich im Folgenden nur noch das Proton mit $\vec S = \pm\half$ und %$\gamma = \SI[]{}$.
+zusammenhängt. $\gamma$ ist dabei das gyromagnetische Verhältnis, welches für
+verschiedene Teilchen unterschiedliche Werte annimmt. Es ist leicht zu sehen,
+dass Spin und magnetisches Moment in die gleiche Richtung zeigen. Da in der
+Medizin vorallem Wasserstoffkerne eine Rolle spielen, betrachte ich im
+Folgenden nur noch das Proton mit der Spinquantenzahl $s = \half$ und $\gamma =
+2\piup\cdot\SI{42.6}{\mega\hertz\per\tesla}$.
 
-Wird ein konstantes externes Magnetfeld angelegt, gibt es für 
+Wird durch ein konstantes externes Magnetfeld $B_z$ ein Richtung vorgegeben hat
+der Spin zwei Einstellmöglichkeiten:
+\[
+    S_z = \pm\half\hbar.
+\]
+Nach der Unschärferelation folgt, bei scharfem $S_z$ sind die anderen
+Komponenten $S_x$ und $S_y$ vollkommen unscharf. Damit erhalten wir
+\[
+    \mu_z = \pm\gamma\half\hbar.
+\]
+Da der Betrag des Spins 
+\[
+    \abs{\vec S} = \sqrt{s(s+1)}\hbar = \sqrt{\frac34}\hbar
+\]
+beträgt, kann er nicht parallel oder antiparallel zum Magnetfeld stehen.
+Dadurch präzediert er mit der sogenannten Larmor-Frequent um die $z$-Achse:
+\[
+    \omega_0 = \gamma B_z.
+\]
+Die potenzielle Energie des Teilchens im Magnetfeld beträgt
+\[
+    E = -\skp{\vec\mu}{\vec B} = -\mu_z \cdot B_z = \mp\gamma\half\hbar B_z,
+\]
+die Energiedifferenz der beiden möglichen Zustände ist damit
+\[
+    \Deltaup E = \gamma\hbar B_z.
+\]
+Aus der Boltzmannstatistik erhalten wir das Besetzungszahlverhältnis mit
+\[
+    \frac{N_\uparrow}{N_\downarrow} = \dexp{\frac{\Deltaup E}{k_\text{B}T}} =
+    \dexp{\frac{\gamma\hbar B_z}{k_\text{B}T}},
+\]
+wobei $N_\uparrow$ (\emph{Spin-up}) die Anzahl der parallel zum Magnetfeld
+stehenden Spin-$z$-Komponenten bezeichnet und $N_\downarrow$ (\emph{Spin-down})
+die Antiparallelen. Bei einer Temperatur von $T = \SI{300}{\kelvin}$ und einem
+magnetfeld von $B_z = \SI{1}{\tesla}$ erhalten wir so ein Verhältnis von
+\[
+    \frac{N_\uparrow}{N_\downarrow} = \num{1.0000068}.
+\]
+Der Überschuss von Spin-up-Teilchen scheint sehr gering zu sein, bedenkt man
+jedoch, dass \SI{1}{\milli\meter\cubed} Wasser über \num{10e22} Wasserstoffkerne
+enthält, wird schnell klar, dass sich eine messbare Magnetisierung einstellt.
 
 \subsection{Kernspinresonanz}
 
