@@ -144,7 +144,46 @@ spricht daher auch von einem \emph{$\frac\piup2$-} bzw. einem
 \emph{$\pi$-Puls}.
 
 Mikroskopisch lässt sich dieser Effekt mit dem Umklappen einzelner Spins durch
-resonante Bestrahlung erklären.
+resonante Bestrahlung erklären. Makroskopisch betrachtet man ein sich mit der
+Larmorfrequenz um die $z$-Achse drehendes Koordinatensystem (vgl. Abbildung
+\ref{fig:kernspinresonanz}). Durch die Koordinatentransormation wird das
+konstante Magnetfeld aufgehoben. Das Wechselfeld $\vec B_\text{T}$ zeige in
+$x'$-Richtung. Analog zur vorherigen Präzession um die $z$-Achse, stellt sich nun eine Präzession um die $x'$-Achse ein. Die Winkelgeschwindigkeit beträgt hier
+\[
+    \omega_\text{F} = \gamma B_\text{T}.
+\]
+Der Flipwinkel lässt sich daher mit
+\[
+    \alpha_\text{F} = \omega_\text{F} t = \gamma B_\text{T} t
+\]
+berechnen.
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        % x'-Achse
+        \draw[thick,->] (0,0) to (-2.5,-2.5) node[left]{$x'$};
+        % y'-Achse
+        \draw[thick,->] (0,0) to (5,0) node[right]{$y'$};
+        % z'-Achse
+        \draw[thick,->] (0,0) to (0,5) node[right]{$z$};
+        % Wechselfeld
+        \draw[ultra thick, dashed, ->] (0,0) to (-1.5,-1.5) node[label=0:{$\vec B_\text{T}$}]{};
+        % Magnetisierungen
+        \draw[ultra thick, ->] (0,0) to (0,3.5) node[left]{$M(t=0)$};
+        \draw[ultra thick, ->] (0,0) to (3.5,0) node[below]{$M\del{t_{\frac\piup2}}$};
+
+        \draw (3.5,0) arc (0:90:3.5);
+        \draw (2.5,2.5) -- (3.2,3.2) node[right]{$M(t)$};
+    \end{tikzpicture}
+    \caption{%
+        Umklappen der Magnetisierung im mit $\omega_\text{L}$ rotierenden Koordinatensystem.
+    }
+    \label{fig:kernspinresonanz}
+\end{figure}
+
+
+
     
 
 \subsection{Relaxation}
