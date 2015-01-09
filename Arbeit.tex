@@ -196,13 +196,31 @@ induziert.
 
 \subsection{Relaxation}
 
+Ist der HF-Puls abgeklungen verbleibt die Magnetisierung nicht in ihrem
+Zustand. Durch Wechselwirkung mit benachbarten Atomen relaxiert die Längsmagnetisierung $M_z$ zu ihrem
+thermischen Gleichgewichtszustand $M_0$. Diese \emph{Sättigungsrückgewinnung} verläuft exponentiell:
+\[
+    M_z(t) = M_0\del{1-\dexp{-\frac{t}{T_1}}}.
+\]
+Diesen Vorgang nennt man \emph{Spin-Gitter-} oder \emph{Längsrelaxation}, die
+Zeit $T_1$ entsprechend \emph{Längsrelaxationszeit}.
+
+Durch Wechselwirkung mit den Spins benachbarter Atome dephasieren die vorher in
+Phase präzedierenden Ensembles. Der dadurch entstehende Zerfall der
+Quermagnetisierung $M_\text{T}$ kann ebenfalls durch eine Exponentialfunktion
+beschrieben werden:
+\[
+    M_\text{T}(t) = M_{\text{T}0}\dexp{-\frac{t}{T_2}}.
+\]
+Der Vorgang wird \emph{Spin-Spin-} oder \emph{Querrelaxation} genannt, die Zeit $T_2$ daher \emph{Querrelaxationszeit}
+
 \subsection{Spin-Echo-Sequenzen}
 
 \subsection{Ortsauflösung}
 
 \section{Versuchsvorrichtung}
 
-\begin{figure}
+\begin{figure}[htbp]
     \centering
     \begin{tikzpicture}
         % PC
