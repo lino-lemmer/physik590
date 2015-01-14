@@ -214,6 +214,57 @@ beschrieben werden:
 \]
 Der Vorgang wird \emph{Spin-Spin-} oder \emph{Querrelaxation} genannt, die Zeit $T_2$ daher \emph{Querrelaxationszeit}. 
 
+\begin{figure}[htbp]
+\begin{minipage}[htbp]{.45\textwidth}
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+                width=\linewidth,
+                height=0.75\linewidth,
+                axis x line=bottom,
+                axis y line=left,
+                xlabel={$t/T_1$},
+                ylabel={$M_z/M_{0}$},
+                xmin=0,
+                ymin=0,
+                ymax=1.2,
+                samples=100,
+            ]
+            \addplot[black] {1-exp(-x/1.)};
+        \end{axis}
+    \end{tikzpicture}
+    \caption{%
+        Sättigungsrückgewinnung nach einem $\frac\piup2$-Puls.
+    }
+\end{minipage}
+\hfill
+\begin{minipage}[htbp]{.45\textwidth}
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+                width=\linewidth,
+                height=0.75\linewidth,
+                axis x line=bottom,
+                axis y line=left,
+                xlabel={$t$},
+                ylabel={$M_\text{T}/M_{\text{T}0}$},
+                xmin=0,
+                ymin=0,
+                ymax=1.2,
+                samples=100,
+                xmajorticks=false,
+                legend entries={$T_2^*$, $T_2$},
+            ]
+            \addplot[black] {exp(-x/1.0)};
+            \addplot[black, dashed] {exp(-x/4.0)};
+        \end{axis}
+    \end{tikzpicture}
+    \caption{%
+        Vergleich der Querrelaxation mit $T_2^*$ und $T_2$ nach einem $\frac\piup2$-Puls. 
+    }
+\end{minipage}
+\end{figure}
+
 
 \subsection{Spin-Echo-Sequenzen}
 
