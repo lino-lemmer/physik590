@@ -160,33 +160,64 @@ Der Flipwinkel lässt sich daher mit
 \]
 berechnen.
 
-\begin{figure}
-    \centering
-    \begin{tikzpicture}
-        % x'-Achse
-        \draw[thick,->] (0,0) to (-2.5,-2.5) node[left]{$x'$};
-        % y'-Achse
-        \draw[thick,->] (0,0) to (5,0) node[right]{$y'$};
-        % z'-Achse
-        \draw[thick,->] (0,0) to (0,5) node[right]{$z$};
-        % Wechselfeld
-        \draw[ultra thick, dashed, ->] (0,0) to (-1.5,-1.5) node[label=0:{$\vec B_\text{T}$}]{};
-        % Magnetisierungen
-        \draw[ultra thick, ->] (0,0) to (0,3.5) node[left]{$M(t=0)$};
-        \draw[ultra thick, ->] (0,0) to (3.5,0) node[below]{$M\del{t_{\frac\piup2}}$};
+\begin{figure}[htbp]
+    \begin{minipage}[htbp]{.45\textwidth}
+        \centering
+        \begin{tikzpicture}
+            % x'-Achse
+            \draw[thick,->] (0,0) to (-1.5,-1.5) node[left]{$x'$};
+            % y'-Achse
+            \draw[thick,->] (0,0) to (3,0) node[right]{$y'$};
+            % z'-Achse
+            \draw[thick,->] (0,0) to (0,3) node[right]{$z$};
+            % Wechselfeld
+            \draw[ultra thick, dashed, ->] (0,0) to (-0.9,-0.9) node[label=0:{$\vec B_\text{T}$}]{};
+            % Magnetisierungen
+            \draw[ultra thick, ->] (0,0) to (0,2.1) node[left]{$M(t=0)$};
+            \draw[ultra thick, ->] (0,0) to (2.1,0) node[below]{$M\del{t_{\frac\piup2}}$};
 
-        \draw (3.5,0) arc (0:90:3.5);
-        \draw (2.5,2.5) -- (3.2,3.2) node[right]{$M(t)$};
-    \end{tikzpicture}
-    \caption{%
-        Umklappen der Magnetisierung im mit $\omega_\text{L}$ rotierenden Koordinatensystem.
-    }
-    \label{fig:kernspinresonanz}
+            \draw (2.1,0) arc (0:90:2.1);
+            \draw (1.5,1.5) -- (1.9,1.9) node[right]{$M(t)$};
+        \end{tikzpicture}
+        \caption{%
+            Umklappen der Magnetisierung im mit $\omega_\text{L}$ um die $z$-Achse rotierenden Koordinatensystem.
+        }
+        \label{fig:kernspinresonanz_rot}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[htbp]{.45\textwidth}
+        \centering
+%        \begin{tikzpicture}
+%            % x-Achse
+%            \draw[thick,->] (-2.25,0) to (2.25,0) node[right]{$x$};
+%            % y-Achse
+%            \draw[thick,->] (0,-2.25) to (0,2.25) node[right]{$y$};
+%            % z-Achse
+%            \draw[thick] (-2,2)  circle  (.2);
+%            \node[right] at (-1.8,2) {$z$};
+%            \draw[thick,fill] (-2,2) circle (.02);
+%        \end{tikzpicture}
+%        \begin{tikzpicture}
+%            \begin{axis}[
+%                    axis equal,
+%                    axis lines = center,
+%                    samples = 100,
+%                ] 
+%                \addplot3[black]({x*cos(deg(x))/sqrt(1+x^2)},
+%        {x*-sin(deg(x))/sqrt(1+x^2)},
+%        {1/sqrt(1+x^2)})  ;
+%            \end{axis}
+%        \end{tikzpicture}
+        \caption{%
+            Herausdrehen der Magnetisierung. Der Betrag der Magnetisierung bleibt konstant.
+        }
+        \label{fig:kernspinresonanz_drauf}
+    \end{minipage}
 \end{figure}
 
 Die rotierende Magnetisierung kann durch senkrecht auf der $x$- oder $y$-Achse stehende Antennenspulen sichtbar gemacht werden. In diesen wird durch den sich veränderden magnetischen Fluss ein Wechselstrom
 \[
-    I(t) \propto \abs{M} \dsin{\omega_L t}
+    I(t) \propto M_\text{T} \dsin{\omega_L t}
 \]
 induziert.
 
