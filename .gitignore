@@ -1,12 +1,14 @@
-Arbeit.bcf
-Arbeit.fdb_latexmk
-Arbeit.bbl
-Arbeit.run.xml
-Arbeit.fls
-Arbeit.pdf
-Arbeit.aux
-Arbeit.blg
-Arbeit.log
-Arbeit.out
-Arbeit.toc
+*.bcf
+*.fdb_latexmk
+*.bbl
+*.run.xml
+*.fls
+*.pdf
+*.aux
+*.blg
+*.log
+*.out
+*.toc
+*.nav
+*.snm
 
