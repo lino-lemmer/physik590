@@ -1,0 +1,477 @@
+\documentclass{beamer}
+
+\input{header.tex}
+\usepackage[font=footnotesize]{caption}
+
+\usetheme{Warsaw}
+\usecolortheme{beaver}
+
+\setbeamertemplate{tableofcontents}[triangle]
+\setbeamertemplate{itemize item}[triangle]
+\setbeamertemplate{itemize subitem}[triangle]
+\setbeamertemplate{footline}{
+	\mbox{
+		\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm plus1fill,rightskip=.3cm]{author in head/foot}%
+			\usebeamerfont{author in head/foot}\insertshortauthor
+		\end{beamercolorbox}%
+		\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm plus1fil]{title in head/foot}%
+			\usebeamerfont{title in head/foot}\insertshorttitle\hfill\insertframenumber/\inserttotalframenumber
+	\end{beamercolorbox}}%
+	\vskip0pt%
+}
+
+
+\author{Lino Lemmer}
+\title[Brustkrebsdiagnose durch Ultraschall und MRT]{Brustkrebsdiagnose durch ultraschallinduzierte Gewebeverschiebung}
+\institute{HISKP - Uni Bonn}
+\subtitle{Stand Bachelorarbeit}
+
+\date{30. Januar 2015}
+
+\begin{document}
+
+%Folie 1
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+
+    \section{Einleitung}
+
+%Folie 2
+
+	\begin{frame}
+		\frametitle{Motivation}
+
+        \begin{itemize}
+            \item
+                über \num{75000} Brustkrebs-Neuerkrankungen allein 2014
+            \item
+                Nachteile bei gängigen Diagnoseverfahren:
+                \begin{itemize}
+                    \item
+                        manuelle Palpation: Tumore im Frühstadium und
+                        tiefliegende Tumore schwer zu finden
+                    \item
+                        Mammographie: körperliche Belastung durch
+                        Röntgenstrahlung
+                    \item
+                        DCE-MRT: körperliche Belastung durch Kontrastmittel
+                    \item
+                        psychische Belastung durch falsch-positiv Diagnose
+                \end{itemize}
+        \end{itemize}
+	\end{frame}
+
+%Folie 3
+
+		\begin{frame}
+			\frametitle{Kombination von Ultraschall und MRT}
+            \begin{itemize}
+                \item
+                    gleicher Ansatz wie Palpation: Sichtbarmachen der Veränderung elastischer
+                    Eigenschaften des Gewebes durch Kombination von Ultraschall
+                    und MRT
+                \item
+                    Schalldruck $\to$ Gewebeverschiebung abhängig von
+                    Elastizität des Gewebes
+                \item
+                    Aufnahme der Verschiebung durch Phasenbilder im MRT
+                \item
+                    Vorteile:
+                \begin{itemize}
+                    \item 
+                        keine körperliche Belastung durch Strahlung
+                    \item
+                        größere Eindringtiefe als manuelle Palpation
+                    \item
+                        unabhängig von Erfahrung des untersuchenden Arztes
+                \end{itemize}
+            \item
+                Studie  an 10 Patientinnen soll zeigen ob Spezifität erhöht werden kann
+            \end{itemize}
+		\end{frame}
+
+	\section{Messvorgang}
+
+    \subsection{Gewebeverschiebung}
+%Folie 4
+
+    \begin{frame}
+        \frametitle{Gewebeverschiebung durch Schallstrahlungsdruck}
+        \begin{figure}
+            \centering
+            \includegraphics[width=.7\textwidth]{../Abbildungen/Verschiebung_Gewebe.pdf}
+        \end{figure}
+    \end{frame}
+
+    \subsection{Sequenz}
+
+%Folie 5
+
+	\begin{frame}
+		\frametitle{Sequenz}
+        \begin{figure}
+            \centering
+            \includegraphics[width=.45\textwidth]{../Abbildungen/sediffmono.pdf}
+        \end{figure}
+	\end{frame}
+
+    \subsection{Verschiebevorrichtung}
+
+
+%Folie 6
+
+	\begin{frame}
+		\frametitle{Verschiebevorrichtung}
+        \begin{itemize}
+            \item 
+                Aufnahme einer Schicht dauert über eine Minute
+            \item
+                Maximalzeit im MRT durch Ethikkommission begrenzt
+            \item
+                Patienten mit Läsion an bekannter Stelle
+            \item
+                Ultraschall soll schnell und zuverlässig an Ort der Läsion gefahren werden können $\to$ Verschiebevorrichtung
+        \end{itemize}
+	\end{frame}
+
+%Folie 7
+
+	\begin{frame}
+		\frametitle{Verschiebevorrichtung}
+        % Lage von Patient über Spiegel
+        \begin{figure}
+            \centering
+            \input{../emitter_spiegel.tikz}
+        \end{figure}
+	\end{frame}
+
+%Folie 8
+
+	\begin{frame}
+		\frametitle{Verschiebevorrichtung}
+        \begin{figure}
+            \centering
+            \resizebox{\textwidth}{!}{
+                \input{../verschiebevorrichtung.tex}
+            }
+        \end{figure}
+	\end{frame}
+
+    \section{Verbesserung der Verschiebevorrichtung}
+
+%Folie 9
+
+	\begin{frame}
+		\frametitle{Problem: Dichtungsringe}
+        \begin{itemize}
+            \item 
+                nach längerem Stehen: Kolben sitzen fest
+        \end{itemize}
+		\begin{columns}
+			\column{0.5\textwidth}
+            vorher:
+            \begin{figure}
+                \centering
+                \resizebox{.9\textwidth}{!}{\input{../nut_schmal.tex}}
+            \end{figure}
+            \begin{itemize}
+                \item 
+                    Nut etwa so breit wie Ring
+                \item
+                    zwei Ringe pro Kolben
+                \item
+                    Silikon-basiertes Schmiermittel
+            \end{itemize}
+			\column{0.5\textwidth}
+            nachher:
+            \begin{figure}
+                \centering
+                \resizebox{.9\textwidth}{!}{\input{../nut_breit.tex}}
+            \end{figure}
+            \begin{itemize}
+                \item 
+                    breitere, tiefere Nut
+                \item
+                    ein Ring pro Kolben
+                \item
+                    PTFE-Spray als Schmiermittel
+            \end{itemize}
+		\end{columns}
+	\end{frame}
+
+%Folie 10
+
+	\begin{frame}
+		\frametitle{Ausblick/todo}
+        \begin{itemize}
+            \item 
+                Steckverbindung zur Befüllung leiert Schläuche aus
+                \begin{itemize}
+                    \item
+                        momentane Lösung: Abschneiden
+                    \item 
+                        Problem: endliche Schlauchlänge
+                    \item
+                        Plan:
+                        \begin{figure}
+                            \centering
+                            \begin{tikzpicture}
+                                \draw[thick] (-1.1,.5) 
+                                -- (-1,.5) 
+                                to[in=180, out=0] (.2,.0);
+                                \draw[thick, fill=gray] (.2,.0)
+                                -- (.2,.6)
+                                -- (1.6,.6)
+                                -- (1.6,.4)
+                                -- (.6,.4)
+                                -- (.5,.0)
+                                -- (.2,.0);
+
+                                \draw[thick] (-1.1,.3) 
+                                to[in=180, out=0] (.1,-.2)
+                                -- (.2,-.2);
+                                \draw[thick, fill=gray] (.2,-.2)
+                                -- (.2,-.8)
+                                -- (1.6,-.8)
+                                -- (1.6,-.6)
+                                -- (.6,-.6)
+                                -- (.5,-.2)
+                                -- (.2,-.2);
+
+                                \draw[thick, fill=gray] (4,0)
+                                -- (2,0)
+                                -- (2,.35)
+                                -- (2.2,.35)
+                                -- (2.2,.2)
+                                -- (2.45,.2)
+                                -- (2.45,.35)
+                                -- (4.,0.35)
+                                -- (4.,0.);
+                                \draw[thick] (4,0)
+                                -- (4.1,0.)
+                                to[in=180, out=0] (5.3,-.5);
+
+                                \draw[thick,fill=gray] (4,-.2)
+                                -- (2,-.2)
+                                -- (2,-.55)
+                                -- (2.2,-.55)
+                                -- (2.2,-.4)
+                                -- (2.45,-.4)
+                                -- (2.45,-.55)
+                                -- (4,-.55)
+                                -- (4,-.2);
+                                \draw[thick] (4,-.2)                        
+                                to[in=180,out=0] (5.2,-.7)
+                                -- (5.3,-.7);
+
+                                \draw[thick, fill] (2.325,-.5) circle(.08);
+                                \draw[thick, fill] (2.325,.3) circle(.08);
+
+
+                            \end{tikzpicture}
+                        \end{figure}
+                \end{itemize}
+            \item
+                Eindringen von Luft bei Benutzung
+        \end{itemize}
+    \end{frame}
+
+    \section{Erste Messung}
+
+    \subsection{Bilder}
+
+    % Folie 11
+
+    \begin{frame}
+        \frametitle{Erste Messung}
+        \begin{itemize}
+            \item 
+                Probandin mit in MRT gut sichtbarem Fibroadenom (gutartiger Tumor)
+                \begin{columns}
+                    \column{.5\textwidth}
+                    \begin{figure}
+                        \centering
+                        \includegraphics[width=.8\textwidth]{../Abbildungen/2014-11-27_9_7_amp.png}
+                    \end{figure}
+                    \column{.5\textwidth}
+                    \begin{figure}
+                        \centering
+                        \includegraphics[width=.8\textwidth]{../Abbildungen/2014-11-27_19_1_phase.png}
+                    \end{figure}
+                \end{columns}
+        \end{itemize}
+    \end{frame}
+
+    %Folie 12
+
+    \begin{frame}
+        \frametitle{Erste Messung}
+        \begin{columns}
+            \column{0.5\textwidth}
+            Phasenbild nach unwrappen
+            \begin{figure}
+                \centering
+                    \includegraphics[width=.9\linewidth]{../Abbildungen/standart_mask.pdf}
+                \end{figure}
+                \column{0.5\textwidth}
+                Phasenbild ohne Untergrund
+                \begin{figure}
+                    \centering
+                    \includegraphics[width=.9\linewidth]{../Abbildungen/diff_standart_mask.pdf}
+                \end{figure}
+            \end{columns}
+	\end{frame}
+
+    \subsection{Verschiebeprofil}
+
+% Folie 13
+
+	\begin{frame}
+        \frametitle{Erste Messung}
+        \begin{itemize}
+            \item 
+                Verschiebung mit $x = -2\piup\frac{\phi-\phi_0}{G\cdot T_G\cdot\gamma}$ berechnen
+                \begin{figure}
+                    \centering
+                    \includegraphics[width=.4\textwidth]{../Abbildungen/dis_standart_lines.pdf}
+                \end{figure}
+            \item
+                betrachte drei Linien
+        \end{itemize}
+	\end{frame}
+
+%Folie 14
+
+	\begin{frame}
+		\frametitle{Erste Messung}
+        \begin{figure}
+            \centering
+            \begin{tikzpicture}[scale=.9]
+                \begin{axis}[
+                        xmin = 60,
+                        xlabel={Pixelnummer},
+                        ylabel={$\Delta x/\si{\micro\meter}$}
+                    ]
+                    \addplot[green, thick] table {../Daten/lin70.txt};
+                    \addplot[blue, thick] table {../Daten/lin73.txt};
+                    \addplot[red, thick] table {../Daten/lin75.txt};
+                \end{axis}
+            \end{tikzpicture}
+        \end{figure}
+    \end{frame}
+
+    \section{Verbesserung der Bildqualität}
+
+% Folie 15
+    
+	\begin{frame}
+		\frametitle{Problem: Bildqualität}
+        \begin{itemize}
+            \item 
+                Bildstörung auf Phasenbildern
+            \item
+                Probleme beim Unwrappen
+            \item
+                kein klares Verschiebungsprofil
+        \end{itemize}
+
+        $\to$ vor weiteren Messungen Störquelle finden
+	\end{frame}
+
+% Folie 16
+
+    \begin{frame}
+        \frametitle{Problem: Bildqualität}
+        \begin{itemize}
+            \item 
+                Messung mit Agar-Phantom (ohne US):
+                \begin{figure}
+                    \centering
+                    \includegraphics[width=.4\textwidth]{../Abbildungen/2014-12-11_10_1_phase.png}
+                \end{figure}
+            \item
+                keine Bildstörungen
+        \end{itemize}
+    \end{frame}
+
+% Folie 17
+
+    \begin{frame}
+        \frametitle{Problem: Bildqualität}
+        \begin{itemize}
+            \item
+                nächste Idee: Signale von außerhalb des Bildausschnittes stören
+            \item 
+                Messung mit Mensch auf Agar-Phantom:
+                \begin{columns}
+                    \column{.5\textwidth}
+                    \begin{figure}
+                        \centering
+                        \includegraphics[width=.8\textwidth]{../Abbildungen/2014-12-11_27_1_phase_nous_mensch.png}
+                    \end{figure}
+                    \column{.5\textwidth}
+                    \begin{figure}
+                        \centering
+                        \includegraphics[width=.8\textwidth]{../Abbildungen/2014-12-11_29_1_phase_us_mensch.png}
+                    \end{figure}
+                \end{columns}
+        \end{itemize}
+    \end{frame}
+
+% Folie 18
+
+    \begin{frame}
+        \frametitle{Problem: Bildqualität}
+        \begin{itemize}
+            \item
+                Lösung: Gewebe außerhalb von Bildbereich sättigen
+            \item 
+                bei Signalaufnahme keine Transversalmagnetisierung
+                \begin{figure}
+                    \centering
+                    \includegraphics[width=.35\textwidth]{../Abbildungen/2014-12-11_37_1_phase_us_mensch_sat.png}
+                    \caption*{ohne US}
+                \end{figure}
+        \end{itemize}
+    \end{frame}
+
+    \section{Zusammenfassung und Ausblick}
+
+% Folie 19
+
+    \begin{frame}
+        \frametitle{Zusammenfassung und Ausblick}
+        \begin{itemize}
+            \item 
+                Verschiebevorrichtung:
+                \begin{itemize}
+                    \item 
+                        Kolben sitzen nicht mehr fest
+                    \item
+                        Steckverbindung muss eingebaut und getestet werden
+                    \item
+                        Quelle der eindringenden Luft muss gefunden werden
+                \end{itemize}
+            \item
+                Bildqualität:
+                \begin{itemize}
+                    \item 
+                        scheint durch Sättigung verbessert worden zu sein
+                    \item
+                        Messung an Patientin steht aus
+                \end{itemize}
+        \end{itemize}
+    \end{frame}
+
+% Folie 20
+
+    \begin{frame}
+        \frametitle{Danke für eure Aufmerksamkeit}
+        \begin{figure}
+            \centering
+            \includegraphics[width=.7\textwidth]{Vortragende.jpg}
+        \end{figure}
+    \end{frame}
+\end{document}
