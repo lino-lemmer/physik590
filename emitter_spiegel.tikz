@@ -1,0 +1,53 @@
+\begin{tikzpicture}
+    % Wannen
+
+    % groß
+    \draw[thick, dashed] (-2.5,0) -- (-2.5,-2.7);
+    \draw[thick] (-2.5,-2.7) 
+        -- (4.5,-2.7) 
+        -- (4.5,0);
+
+    % klein
+    \draw[thick] (1.8,.5) -- (1.8,-1);
+    \draw[thick] (4.2,.5) -- (4.2,-1);
+    \draw (1.8,-0.8) -- (4.2,-0.8);
+    \draw[dashed] (4.0,-.8) -- (4.6,-1.2) node[right]{Mylarfolie};
+
+    % Wasser
+    \draw[wave, blue] (-2.5, -.2) -- (1.8,-.2);
+    \draw[wave, blue] (4.2, -.2) -- (4.5,-.2);
+    \draw[wave, blue] (1.8, .2) -- (4.2,.2);
+
+    % Spiegel
+    \draw[thick] (2.5, -2.5) 
+        -- (3.5,-1.5) 
+        -- (3.6,-1.6) 
+        -- (2.6,-2.6) 
+        -- (2.5,-2.5);
+    \draw[dashed] (3.1,-2.0) -- (3.3,-2.9) node[below] {Spiegel};
+
+    % Frau
+    \draw[thick] (4.5,.8) 
+        -- (4.3,.8) 
+        to[in=0, out=180] (3.,-.5) 
+        to[in=-10, out=180] (1.8, .8)
+        to[in=10, out=170] (1.2,.8)
+        to[in=10, out=190] (1.,.2)
+        to[in=-0, out=170] (.45,.2)
+        to[in=-10, out=180] (.35,.0)
+        to[in=-10, out=170] (-.1,.2)
+        to[in=-20,out=170] (-.5,.3)
+        to[in=-90,out=160] (-.8,.8);
+
+    % US-Emitter
+    \draw[thick] (-1.9,-2.5) 
+        -- (-2.1,-2.5) 
+        -- (-2.1,-1.5) 
+        -- (-1.9,-1.5) ;
+    \draw[thick, bend right] (-1.9,-1.5) to (-1.9,-2.5);
+    \draw[dashed] (-2.075,-2.0) -- (-2.7,-1.7) node[left]{\parbox{1.3cm}{US-\\Emitter}};
+
+   % Ultraschall
+    \draw (-1.92,-2.45) -- (2.9,-2.1) -- (3.0,.3);
+    \draw (-1.92,-1.55) -- (3.2,-1.8) -- (3.0,.3);
+\end{tikzpicture}
