@@ -98,7 +98,7 @@ Da der Betrag des Spins
     \abs{\vec S} = \sqrt{s(s+1)}\hbar = \sqrt{\frac34}\hbar
 \]
 beträgt, kann er nicht parallel oder antiparallel zum Magnetfeld stehen.
-Dadurch präzediert er mit der sogenannten Larmor-Frequent um die $z$-Achse:
+Dadurch präzediert er mit der sogenannten Larmor-Frequenz um die $z$-Achse:
 \[
     \omega_0 = \gamma B_z.
 \]
@@ -321,7 +321,24 @@ man in den Echo-Amplituden die exponentielle Querrelaxation mit $T_2$ erkennen.
 
 \subsection{Ortsauflösung}
 
-Die Antenne, mit der die Transversalmagnetisierung aufgenommen wird, sieht immer nur das gesamte Signal, das heißt die vektorielle Summe aller Magnetisierungn. Um jedem einzelnen Voxel\footnote{volumic pixel, also ein Volumenelement} ein Signal zuordnen zu können, werden eine Reihe von Magnetfeldgradienten verwendet.
+Die Antenne, mit der die Transversalmagnetisierung aufgenommen wird, sieht
+immer nur das gesamte Signal, das heißt die vektorielle Summe aller
+Magnetisierungn. Um jedem einzelnen Voxel\footnote{volumic pixel, also ein
+Volumenelement} ein Signal zuordnen zu können, werden eine Reihe von
+Magnetfeldgradienten verwendet (vergleiche
+Abbildung~\ref{fig:bew-sens-sequenz}).
+
+Mit dem Gradienten $G_z$ während des $\frac\piup2$-Pulses wählt man eine
+Schicht aus, da nur Spins mit der Frequenz des HF-Pulses umgeklappt werden
+können. So erhält man die $z$-Koordinate. Durch den Gradient $G_y$,
+der zwischen den beiden HF-Pulsen geschaltet wird, verändert sich die
+Phasenlage in den einzelnen Voxeln. Wiederholt man die Messung $N$ mal und
+verändert nur die Stärke von $G_y$, kann man Rückschluss auf die $y$-Koordinate
+der Voxel ziehen. So können $N$ Voxel unterschieden werden. Beim Auslesen des
+Signals wird nun noch ein Gradient $G_x$ eingeschaltet. Je nach $x$-Koordinate
+rotiert die Transversalmagnetisierung jetzt mit einer anderen Frequenz. Durch
+Fouriertransformation des Antennensignals können die Voxel so auch in
+$x$-Richtung unterschieden werden.
 
 \begin{figure}
     \centering
@@ -331,6 +348,15 @@ Die Antenne, mit der die Transversalmagnetisierung aufgenommen wird, sieht immer
     }
     \label{fig:bew-sens-sequenz}
 \end{figure}
+
+\subsection{Bewegungssensitive Sequenzen}
+
+Um eine Gewebeverschiebung im MRT-Bild sichtbar machen zu können, werden symmetrisch um den $\piup$-Puls zwei identische Gradienten $G_x$ der Dauer $T_G$ geschaltet (Abbildung~\ref{fig:bew-sens-sequenz}, grau). Der erste Gradient sorgt dabei für eine Phasenverschiebung abhängig von der $x$-Koordinate. Der $\piup$-Puls spiegelt nun die Magnetisierung. Findet keine Bewegung statt, macht der zweite Gradient die Phasenverschiebung daher Rückgängig. Ist das Gewebe allerdings bewegt worden, findet keine vollständige Rephasierung statt. Die Phasendifferenz ist dann konstant und kann mit
+\[
+    \Deltaup \phi = \gamma \cdot G_x T_G \Deltaup x
+\]
+in eine Verschiebung umgerechnet werden.
+
 
 \section{Versuchsvorrichtung}
 
