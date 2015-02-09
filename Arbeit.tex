@@ -66,7 +66,63 @@ befasse ich mich mit der Bildqualität.
 
 \subsection{Grundlagen}
 
+Als Schall bezeichnet man dabei die Ausbreitung meist periodischer Druck- und
+Dichteschwankungen in elastischen Medien. In Flüssigkeiten und Gasen sind dies
+Longitudinalwellen die der Wellengleichung
+\[
+    \laplace p - \frac1{c^2}\dpd[2]pt = 0
+\]
+genügen. Hierbei ist
+\[
+    c=\sqrt{\frac{K}{\rho_0}}
+\]
+die Schallgeschwindigkeit im Medium. $\rho_0$ ist die Dichte des Mediums ohne
+Schalleinfluss und $K$ ist das Kompressionsmodul. In Festkörpern muss dieses
+durch das Elastizitätsmodul $E$ ersetzt werden. Hier sind auch
+Transversalwellen möglich.
+
+Für die Ausbreitung von Schall, insbesondere beim Übergang zwischen zwei
+Medien, definiert man die Schallimpedanz
+\[
+    Z=\sqrt{K\rho_0}.
+\]
+Haben zwei Medien eine unterschiedliche Impedanz, werden Schallwellen an der
+Grenzfläche teilweise reflektiert. Bei senkrechtem Einfall ist der
+Reflexionskoeffizient
+\[
+    R=\del{\frac{Z_2-Z_1}{Z_2+Z_1}}^2.
+\]
+Die Frequenz der Schallwellen hängt mit der Schallgeschwindigkeit über
+\[
+    f = \frac c\lambda
+\]
+zusammen. Schall im Frequenzbereich \SI{20}{\kilo\hertz} bis
+\SI{1.6}{\mega\hertz} nennt man als Ultraschall.
+
+\subsection{Schallstrahlungskraft}
+
+Die Dichteschwankung im Medium kann man sich als ein konstantes Ansaugen und
+Abstoßen von Teilchen vorstellen. Bei einer hohen Schwingungsfrequenz verhalten
+sich diese beim Abstoßen anders als beim Ansaugen. Dehnt sich das Medium beim
+Zurücksaugen nicht schnell genug aus, strömen seitlich Teilchen nach. Da die
+Teilchen stärker weggestoßen als zurückgezogen werden, wird so eine Strömung in
+Ausbreitungsrichtung des (Ultra-)schalls erzeugt, die ein Druck auf
+nachfolgende Teilchen hervorruft. Durch diesen \emph{Schallstrahlungsdruck}
+wird eine messbare Kraft ausgeübt, daher spricht man auch von
+\emph{Schallstrahlungskraft}. 
+
 \subsection{Erzeugung}
+
+Für eine Möglichkeit zur Erzeugung von Ultraschall nutzt man den
+\emph{reziproken piezoelektrischen Effekt}.
+
+In piezoelektrischen Materialien kann durch mechanischen Druck ein zur
+Druckänderung proportionales elektrisches Feld hervorgerufen werden. Dadurch
+ist eine elektrische Spannung abgreifbar. Wird nun umgekehrt eine Spannung an
+ein solches Material angelegt, staucht oder streckt dieses sich in eine
+Richtung. Eine Wechselspannung ruft demnach ein periodisches Ausdehnen und
+Zusammenziehen hervor, welche sich als Schall im Medium ausbreiten. Ist die
+Frequenz der Wechselspannung ausreichend hoch, entsteht Ultraschall.
 
 \section{Magnet-Resonanz-Tomographie}
 
