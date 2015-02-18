@@ -22,9 +22,13 @@
 
 \IfFileExists{bibliography.bib}{
     \newcommand{\bibliographyfile}{bibliography.bib}
+    \bibliography{\bibliographyfile}
+    \AtEndDocument{\printbibliography}
 }{
     \IfFileExists{../../bibliography.bib}{
         \newcommand{\bibliographyfile}{../../bibliography.bib}
+        \bibliography{\bibliographyfile}
+        \AtEndDocument{\printbibliography}
     }
 }
     
@@ -34,11 +38,6 @@
     style=alphabetic,
     hyperref=true
 ]{biblatex}
-
-\IfFileExists{\bibliographyfile}{
-    \bibliography{\bibliographyfile}
-    \AtEndDocument{\printbibliography}
-}{}
 
 % Für \SIunit[]{} und \num in deutschem Stil
 
