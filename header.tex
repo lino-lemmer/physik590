@@ -22,16 +22,10 @@
 
 \IfFileExists{bibliography.bib}{
     \newcommand{\bibliographyfile}{bibliography.bib}
-    \bibliography{\bibliographyfile}
-    \AtEndDocument{\printbibliography}
 }{
-    \IfFileExists{../../bibliography.bib}{
-        \newcommand{\bibliographyfile}{../../bibliography.bib}
-        \bibliography{\bibliographyfile}
-        \AtEndDocument{\printbibliography}
-    }
+    \newcommand{\bibliographyfile}{../../bibliography.bib}
 }
-    
+
 
 \usepackage[
     backend=biber,
@@ -39,6 +33,11 @@
     hyperref=true
 ]{biblatex}
 
+\IfFileExists{\bibliographyfile}{
+    \bibliography{\bibliographyfile}
+    \AtEndDocument{\printbibliography}
+}{}
+    
 % Für \SIunit[]{} und \num in deutschem Stil
 
  \usepackage[output-decimal-marker={,}]{siunitx}
