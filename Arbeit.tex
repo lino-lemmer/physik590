@@ -465,15 +465,62 @@ Veränderungen im Elastizitätsmodul des Gewebes können damit dargestellt werde
 
 \section{Verschiebevorrichtung}
 
+Durch den Ethikantrag ist eine Untersuchungsdauer von 30 Minuten pro Messtermin
+vorgegeben. Da die Aufnahme einer Schicht über eine Minute dauert und da wir
+den genauen Ort der Läsion kennen, wurde eine Vorrichtung entwickelt, die den
+Ultraschall präzise und schnell an die richtige Stelle fahren kann
+(Abbildung~\ref{fig:aufbau_total}).
+
+Im Kontrollraum befinden sich drei Steuerzylinder aus Plexiglas mit durch
+Schrittmotoren steuerbaren Kolben. Deren Verschiebung wird durch mit
+entgastem Wasser gefüllten Schläuchen an drei baugleiche Verschiebezylinder im
+Tomographenraum weiter gegeben, wo wiederum Kolben für die Bewegung des
+Ultraschallemitters sorgen. Die Verschiebezylinder sind dabei noch mit einem
+Druckausgleichsbehälter verbunden, der die Schrittmotoren beim Zurückziehen der
+Kolben unterstützt. Der größte der drei Verschiebezylinder ist fest mit einer
+Plexiglasplatte verklebt, die eine Fixierung in einer wassergefüllten Wanne
+ermöglicht. Erst durch das Wasser kann sich der Ultraschall mit einer Frequenz
+von \SI{2.5}{\mega\hertz} ausbreiten. In Luft ist dies nicht möglich. Zudem wird
+die Reflektion beim Übergang zur Brust dadurch möglichst klein gehalten.
+
+Da in der Wand zwischen Kontroll- und MRT-Raum nur zwei Löcher mit wenigen
+Zentimetern Durchmesser zu Verfügung stehen, sind die Schläuche mit
+tropffreien Kupplungen versehen. Um dennoch eine Wiederbefüllung zu ermöglichen
+gibt es an jedem Schlauch noch eine einfache Steckverbindung, die nach der
+Befüllung nicht mehr gelöst wird.
+
 \begin{figure}[htbp]
     \centering
     \resizebox{\textwidth}{!}{\input{verschiebevorrichtung.tex}}
     \caption{%
-        Verschiebevorrichtung
+        Verschiebevorrichtung. Der linke Teil mit PC, Schrittmotoren und Steuerzylindern befindet sich im Kontrollraum. Der rechte Teil liegt in einer mit Wasser gefüllten Wanne im Tomographen-Raum, unter der Liege der Probandin.
     }
     \label{fig:aufbau_total}
 \end{figure}
 
+Die Patientin liegt, wie in Abbildung~\ref{fig:aufbau_emitter_spiegel} zu
+erkennen ist, mit dem Gesicht nach unten über der Verschiebevorrichtung. Der
+Ultraschall wird vom Emitter waagerecht abgestrahlt und durch den Spiegel in
+die Vertikale gelenkt, wo er in die Brust einkoppeln kann. Diese befindet sich
+in einer weiteren Wanne, die durch eine Mylar-Folie vom großen Becken getrennt
+ist. So kann einerseits durch Einfüllen warmen Wassers die Messung angenehmer
+gestaltet werden, andererseits werden durch die Folie Strömungsartefakte im
+Bild vermieden. Um die Brust befindet sich die Brustspule, die das Signal
+aufnimmt.
+
+\begin{figure}[htbp]
+    \centering
+    \resizebox{.9\textwidth}{!}{\input{emitter_spiegel.tikz}}
+    \caption{%
+        Position der Patientin über der Verschiebevorrichtung. Die Brustspule ist nicht dargestellt.
+    }
+    \label{fig:aufbau_emitter_spiegel}
+\end{figure}
+
+Der Zylinder, der den Abstand zwischen Emitter und Spiegel variieren kann und
+somit den Fokus in der Vertikalen verschiebt, ist nicht notwendig, da die
+Fokuslänge mehrere Zentimeter beträgt. 
+%TODO Anna-Lisa Diplomarbeit
 
 \chapter{Durchführung}
 
