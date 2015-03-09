@@ -2,8 +2,7 @@
     % Wannen
 
     % groß
-    \draw[thick, dashed] (-2.5,0) -- (-2.5,-2.7);
-    \draw[thick] (-2.5,-2.7) 
+    \draw[thick] (-2.5,0) -- (-2.5,-2.7) 
         -- (4.5,-2.7) 
         -- (4.5,0);
 
@@ -16,7 +15,8 @@
     % Wasser
     \draw[wave, blue] (-2.5, -.2) -- (1.8,-.2);
     \draw[wave, blue] (4.2, -.2) -- (4.5,-.2);
-    \draw[wave, blue] (1.8, .2) -- (4.2,.2);
+    \draw[wave, blue] (1.8, .2) -- (2.37,.2);
+    \draw[wave, blue] (3.67,.2) -- (4.2,.2);
 
     % Spiegel
     \draw[thick] (2.5, -2.5) 
