@@ -443,9 +443,9 @@ $x$-Richtung unterschieden werden.
 \subsection{Bewegungssensitive Sequenzen}
 
 Um eine Gewebeverschiebung im MRT-Bild sichtbar machen zu können, werden symmetrisch um den $\piup$-Puls zwei identische Gradienten $G_x$ der Dauer $T_G$ geschaltet (Abbildung~\ref{fig:bew-sens-sequenz}, grau). Der erste Gradient sorgt dabei für eine Phasenverschiebung abhängig von der $x$-Koordinate. Der $\piup$-Puls spiegelt nun die Magnetisierung, da er sie um genau $piup$ dreht. Findet keine Bewegung statt, macht der zweite Gradient die Phasenverschiebung daher rückgängig. Ist das Gewebe allerdings bewegt worden, findet keine vollständige Rephasierung statt. Die Phasendifferenz ist dann konstant und kann mit
-\[
-    \Deltaup \phi = \gamma \cdot G_x T_G \Deltaup x
-\]
+\begin{equation}
+    \Deltaup \phi = \gamma \cdot G_x T_G \Deltaup x \label{eq:phi_x}
+\end{equation}
 in eine Verschiebung umgerechnet werden.
 
 
@@ -582,7 +582,7 @@ verwendeten zwei.
 \end{figure}
 
 Ein weiterer Faktor ist die Wahl des Schmiermittels. Bisher wurde das
-Silikonbasierte \emph{Dow~Corning\textsuperscript{\textregistered}~High~Vacuum~Grease} verwendet. Ich
+Silikonbasierte \emph{Dow~Corning\textsuperscript{\textregistered} High~Vacuum~Grease} verwendet. Ich
 hab mich für eine Verwendung von \emph{Hochleistungs
 \textsc{PTFE}-Spray} von Caramba entschieden, da dieses auch nach
 längerem Stehen unter Druck gute Laufeigenschaften hat.
@@ -593,6 +593,100 @@ längerem Stehen unter Druck gute Laufeigenschaften hat.
 \subsection{Kalibrierung}
 
 \section{Verbesserung des Bildertrages}
+
+In einer ersten Messung untersuchten wir eine Probandin mit einem auf
+MRT-Bildern deutlich sichtbaren Fibroadenom. Das Amplituden- bzw- Phasenbild
+der Messung mit Ultraschall ist in Abbildung~\ref{fig:prob1_ampl_US} bzw.
+\ref{fig:prob1_phas_US} zu sehen.  Für eine Auswertung benötigen wir nur das
+Phasenbild. Die Phasenwinkel 0 und $2\piup$ sind nicht unterscheidbar, daher
+entstehen im Bild schwarz-weiße Phasensprünge. Diese müssen vor einer weiteren
+Auswertung herausgerechnet werden. Dazu wurde ein von Sebastian Theilenberg
+implementiertes Programm verwendet. In Abbildung~\ref{fig:prob1_unwrapped} ist
+das korrigierte Bild zu sehen. Zudem wurde hier nur der Bereich der Brust
+ausgewählt und ein Untergrund abgezogen. Man erkennt deutlich, dass nicht alle
+Phasensprünge herausgerechnet werden konnten. Dies ist ein erster Hinweiß auf
+zu starke Bildstörungen.
+
+
+\begin{figure}[htbp]
+    \begin{minipage}[htbp]{.48\textwidth}
+        \centering
+        \includegraphics[width=.8\textwidth]{Abbildungen/2014-11-27_18_1_amp_kontrast.png}
+        \caption{%
+            Amplitudenbild mit US. Oben im Bild sind der Spiegel und Verwirbelungen im Wasser durch den Ultraschall zu sehen. Auf Höhe der Mitte sind Bildstörungen zu erkennen.
+        }
+        \label{fig:prob1_ampl_US}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[htbp]{.48\textwidth}
+        \centering
+        \includegraphics[width=.8\textwidth]{Abbildungen/2014-11-27_19_1_phase.png}
+        \caption{%
+            Phasenbild mit US. Da die Phase nur im Bereich 0 bis $2\piup$ Kodiert ist, wird z.B. eine Verschiebung von $\num{2.1}\piup$ als $\num{.1}\piup$ angezeigt und es entstehen schwarz-weiße Phasensprünge.
+        }
+        \label{fig:prob1_phas_US}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[htbp]
+    \begin{minipage}[htbp]{.48\textwidth}
+        \centering
+        \includegraphics[width=.9\textwidth]{Abbildungen/diff_standart_mask.pdf}
+        \caption{%
+            Um Phasensprünge bereinigtes Phasenbild. Die Phasenverschiebung ohne US wurde abgezogen. Die Skala bezeichnet die Zeilen- bzw. Spaltennummer. Die Farbkodierung gibt die Phasenverschiebung in Vielfachen von $2\piup$ an. 
+        }
+        \label{fig:prob1_unwrapped}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[htbp]{.48\textwidth}
+        \centering
+        \includegraphics[width=.9\textwidth]{Abbildungen/dis_standart_lines.pdf}
+        \caption{%
+            Gewebeverschiebung. Die Skala bezeichnet die Zeilen- bzw. Spaltennummer. Die Farbkodierung gibt die Gewebeverschiebung in \si{\micro\meter} an. Die Verschiebung entlang der Linien wird im Folgenden genauer betrachtet.
+        }
+        \label{fig:prob1_displacement}
+    \end{minipage}
+\end{figure}
+
+Mit Gleichung \ref{eq:phi_x} kann die Phasenverschiebung in eine
+Gewebeverschiebung umgerechnet werden. Dies ist in
+Abbildung~\ref{fig:prob1_displacement} dargestellt. Da uns der Verlauf parallel
+zum Ultraschall interessiert, schauen wir uns die Verschiebung entlang dreier
+ausgewählter Linien an. Diese ist in Abbildung~\ref{fig:verschiebeprofil}
+dargestellt.  Phasensprünge, die das Programm nicht entfernen konnte, wurden
+dabei manuell entfernt. 
+
+Man erkennt, wie zu erwarten war, einen insgesamt abfallenden Verlauf, da durch
+Absorbtion im Gewebe die Intensität des Ultraschalls abnimmt. Jedoch sollte die
+Kurve annähernd exponentiell verlaufen. Neben einer deutlichen Kante bei der
+grünen und blauen Linie im Bereich zwischen den Pixelnummern 95 und 100, die
+durch einen Tumor erklärbar wäre, finden sich noch viele weitere
+Unstetigkeiten. Ebenso ist die ändert die Verschiebung ab Pixelnummer 100
+teilweise ihr Vorzeichen. Dies ist weder durch Phasensprünge noch durch
+Veränderungen im Gewebe zu erklären. Anscheinend waren also die Bildstörungen,
+die schon vorher aufgefallen sind, so stark, dass kein klares Verschiebeprofil
+erkannt werden kann. Vor weiteren Messungen muss also die Quelle dieser
+Störungen gefunden werden.
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+                xmin = 60,
+                xlabel={Pixelnummer},
+                ylabel={$\Delta x/\si{\micro\meter}$},
+                grid=major,
+            ]
+            \addplot[green, thick] table {Daten/lin70.txt};
+            \addplot[blue, thick] table {Daten/lin73.txt};
+            \addplot[red, thick] table {Daten/lin75.txt};
+        \end{axis}
+    \end{tikzpicture}
+    \caption{%
+        Verschiebeprofil entlang drei verschiedener Linien.
+    }
+    \label{fig:verschiebeprofil}
+\end{figure}
 
 \subsection{Problem: Bildstörungen}
 
