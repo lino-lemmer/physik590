@@ -461,9 +461,36 @@ die Brust eingekoppelt und die durch den Ultraschallstrahldruck hervorgerufene
 Verschiebung mittels einer bewegungssensitiven MRT-Sequenz sichtbar gemacht.
 Veränderungen im Elastizitätsmodul des Gewebes können damit dargestellt werden.
 
-\section{Ultraschallemitter}
+\section{Geräte und Aufbau}
 
-%TODO
+Für unsere Messungen verwenden wir den Siemens
+\textsc{MAGNETOM}\textsuperscript{\textregistered} Avanto \SI{1.5}{\tesla}
+Tomographen der Forschungsgruppe Life \& Brain GmbH. Um den Ultraschall mit der
+bewegungssensitiven Spin-Echo-Sequenz zu synchronisieren wird der in
+Abbildung~\ref{fig:elektronik} gezeigte elektronische Aufbau verwendet. Der
+$\piup$-HF-Puls des Tomographen wird mit einer Antenne aufgenommen. Diese
+Signal wird verstärkt gleichgerichtet, integriert und mit einen Diskriminator
+und einer Zeit-Logik-Einheit mit einstellbarer Verzögerung als Logikpuls an
+einen Signalgenerator weitergegeben. Dieser erzeugt ein
+\SI{2.5}{\mega\hertz}-Signal, welches über zwei Verstärker in eine
+Sicherheitsbox gegeben wird. Dieser analysiert das Signal und leitet es, bei
+Überschreitung eingestellter Grenzwerte, an einen Widerstand weiter, sodass es
+zu keinen Schädigungen der Probandin kommen kann. Liegt alles innerhalb der
+Grenzwerte wird das Signal an den Emitter weitergegeben. Im Tomographenraum ist
+am BNC-Kabel zum Emitter eine stromkompensierende Drossel angebracht, die die
+Aufgabe hat, Störsignale zu unterdrücken \parencite{diss_radicke}. Vor dem
+Emitter ist noch eine Impedanzanpassung angebracht, um die Impedanz der
+Piezokeramik an die Ausgangsimpedanz des letzten Verstärkers anzupassen und so
+die Leistungsaufnahme zu maximieren \parencite{dipl_kofahl}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=.75\textwidth]{Abbildungen/elektronik.pdf}
+    \caption{%
+        Aufbau der Elektronik zur Synchronisation des Ultraschalls mit der bewegungssensitiven Spin-Echo-Sequenz. Der $\piup$-Puls des Tomographen wird von der Antenne aufgefangen und als Logikpuls an den Signalgenerator weiter gegeben. Dessen Signal wird verstärkt und, wenn es innerhalb der Grenzwerte liegt an den Emitter weitergegeben.
+    }
+    \label{fig:elektronik}
+\end{figure}
 
 \section{Verschiebevorrichtung}
 
