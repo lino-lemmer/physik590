@@ -148,6 +148,24 @@ Dieser Abstand kann durch den Einsatz einer Linse verringert werden.
     \label{fig:us-feld}
 \end{figure}
 
+\subsection{Sicherheitsaspekte}
+
+Gewebe kann durch Ultraschall auf zwei Arten beschädigt werden. Zum einen kann
+durch die Absorbtion des Ultraschalls die Temperatur im Gewebe angehoben
+werden. Zum anderen kann durch Kaviation, also dem Bilden und Kollabieren von
+Gasbläschen in der Unter- bzw. Überdruckphase des Ultraschalls, Gewebe zerstört
+werden. Die amerikanische \emph{Food and Drug Administration (FDA)} hat für die
+Grenzwerte zwei Indizes entwickelt. Der \emph{TI}\footnote{thermal index}
+beschreibt das Verhältnis von Schallausgangsleistung zu der Leistung, die
+benötigt wird, Gewebe um \SI{1}{\degree} zu erwärmen. Der
+\emph{MI}\footnote{mechanical index} ist der Quotient aus dem Druck im Minimum
+der Unterdruckphase in \si{\mega\pascal} im Fokus und der Wurzel aus der
+Frequenz des Ultraschalls in \si{\mega\hertz}
+\parencite{FDA_ultrasound_limits}. Die FDA hat als Grenzwerte
+$\text{MI}=\num{1.9}$ und $\text{TIS}=6$ festgelegt, wobei \emph{TIS} der
+\emph{TI} bezogen auf Weichteilgewebe ist.
+Der für diese Arbeit genutze Ultraschall untschreitet mit $\text{MI}=\num{0.4}$ und $\text{TIS}\approx2$ \parencite{diss_radicke} diese Grenzwerte deutlich.
+
 \section{Magnet-Resonanz-Tomographie}
 
 \subsection{Grundlagen}
@@ -459,7 +477,7 @@ $x$-Richtung unterschieden werden.
 
 \subsection{Bewegungssensitive Sequenzen}
 
-Um eine Gewebeverschiebung im MRT-Bild sichtbar machen zu können, werden symmetrisch um den $\piup$-Puls zwei identische Gradienten $G_x$ der Dauer $T_G$ geschaltet (Abbildung~\ref{fig:bew-sens-sequenz}, grau). Der erste Gradient sorgt dabei für eine Phasenverschiebung abhängig von der $x$-Koordinate. Der $\piup$-Puls spiegelt nun die Magnetisierung, da er sie um genau $piup$ dreht. Findet keine Bewegung statt, macht der zweite Gradient die Phasenverschiebung daher rückgängig. Ist das Gewebe allerdings bewegt worden, findet keine vollständige Rephasierung statt. Die Phasendifferenz ist dann konstant und kann mit
+Um eine Gewebeverschiebung im MRT-Bild sichtbar machen zu können, werden symmetrisch um den $\piup$-Puls zwei identische Gradienten $G_x$ der Dauer $T_G$ geschaltet (Abbildung~\ref{fig:bew-sens-sequenz}, grau). Der erste Gradient sorgt dabei für eine Phasenverschiebung abhängig von der $x$-Koordinate. Der $\piup$-Puls spiegelt nun die Magnetisierung, da er sie um genau $\piup$ dreht. Findet keine Bewegung statt, macht der zweite Gradient die Phasenverschiebung daher rückgängig. Ist das Gewebe allerdings bewegt worden, findet keine vollständige Rephasierung statt. Die Phasendifferenz ist dann konstant und kann mit
 \begin{equation}
     \Deltaup \phi = \gamma \cdot G_x T_G \Deltaup x \label{eq:phi_x}
 \end{equation}
@@ -747,8 +765,6 @@ Störungen gefunden werden.
 
 \end{document}
 
-%TODO Schallfeld Kreisförmiger Emitter
-%TODO Gewebeschädigung durch Ultraschall (Dössel)
 %TODO Emitteraufbau beschreiben
 %TODO Steckverbindung
 %TODO Maßnahmen zur Verbesserung der Bildqualität
