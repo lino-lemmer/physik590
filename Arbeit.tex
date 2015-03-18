@@ -665,6 +665,8 @@ auch nach längerem Stehen unter Druck gute Laufeigenschaften hat.
 
 \section{Verbesserung des Bildertrages}
 
+\subsection{Erste Messung}
+
 In einer ersten Messung untersuchten wir eine Probandin mit einem auf
 MRT-Bildern deutlich sichtbaren Fibroadenom. Das Amplituden- bzw- Phasenbild
 der Messung mit Ultraschall ist in Abbildung~\ref{fig:prob1_ampl_US} bzw.
@@ -732,11 +734,11 @@ Absorbtion im Gewebe die Intensität des Ultraschalls abnimmt. Jedoch sollte die
 Kurve annähernd exponentiell verlaufen. Neben einer deutlichen Kante bei der
 grünen und blauen Linie im Bereich zwischen den Pixelnummern 95 und 100, die
 durch einen Tumor erklärbar wäre, finden sich noch viele weitere
-Unstetigkeiten. Ebenso ist die ändert die Verschiebung ab Pixelnummer 100
+Unstetigkeiten. Ebenso ändert die Verschiebung ab Pixelnummer 100
 teilweise ihr Vorzeichen. Dies ist weder durch Phasensprünge noch durch
-Veränderungen im Gewebe zu erklären. Anscheinend waren also die Bildstörungen,
+Veränderungen im Gewebe zu erklären. Anscheinend sind also die Bildstörungen,
 die schon vorher aufgefallen sind, so stark, dass kein klares Verschiebeprofil
-erkannt werden kann. Vor weiteren Messungen muss also die Quelle dieser
+erkannt werden kann. Vor weiteren Messungen an Probandinnen musste also die Quelle dieser
 Störungen gefunden werden.
 
 \begin{figure}
@@ -759,11 +761,107 @@ Störungen gefunden werden.
     \label{fig:verschiebeprofil}
 \end{figure}
 
-\subsection{Problem: Bildstörungen}
+\subsection{Erste Fehlersuche}
 
-\chapter{Ergebnis/Ausblick}
+Für die Suche nach der Ursache der Bildstörungen wurde an einem Brustphantom
+gemessen. Dieses bestand aus einem PMMA-Behälter der mit einem Hydrogel auf
+Agar-Basis\footnote{einem Geliermittel, das aus einer Alge gewonnen wird}
+gefüllt wurde. Für eine bessere Absorbtion des Ultraschalls wurde zudem ein
+feines Glasgranulat hinzugefügt.
 
-\end{document}
+In Abbildung~\ref{fig:phantom_einzeln} ist das Phasenbild des Phantoms zu
+sehen. Im Phantom selber sind keine Bildstörungen zu erkennen. Im Bildbereich
+darüber kann man einzelne Formen erkennen, die eigentlich nicht in diesem
+Bildabschnitt liegen. Der „Schneesturm“ rechts und links des Phantoms ist Luft
+bzw PMMA. Beide erzeugen in Phasenbildern kein klares Signal. Sobald ein
+menschlicher Körper über dem Phantom im Tomographen liegt, entsteht im Bild
+eine waagerechte Linie im Phantom (Abbildung~\ref{fig:phantom_mensch}). Dies
+ist ein Hinweis darauf, dass die Störsignale vom Bereich außerhalb des
+betrachteten Bildausschnitt kommen. Eine Lösung ist die Sättigung eben dieser
+Bereiche. Das sorgt dafür, dass sie bei der Signalaufnahme keine
+Transversalmagnetisierung haben und so kein Signal abgeben. Wird nun der ganze
+Körper in der betrachteten Schicht gesättigt, verschwindet die waagerechte
+Störlinie, wie in Abbildung~\ref{fig:phantom_mensch_sat} zu erkennen ist.
+
+
+    \begin{figure}
+        \begin{minipage}[htbp]{.45\textwidth}
+            \centering
+            \includegraphics[width=.8\textwidth]{Abbildungen/2014-12-11_10_1_phase.png}
+            \caption{Phantom einzeln ohne Ultraschall. Im Phantom sind keine Bildstörungen zu sehen.}
+            \label{fig:phantom_einzeln}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[htbp]{.45\textwidth}
+            \centering
+            \includegraphics[width=.8\textwidth]{Abbildungen/2014-12-11_27_1_phase_nous_mensch.png}
+            \caption{Phantom mit darüberliegendem Menschen, ohne Ultraschall. Im Phantom erscheint eine waagerechte Linie.}
+            \label{fig:phantom_mensch}
+        \end{minipage}
+    \end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=.4\textwidth]{Abbildungen/2014-12-11_37_1_phase_us_mensch_sat.png}
+    \caption{%
+        Phantom mit darüberliegendem Menschen, ohne Ultraschall. Durch die Sättigung der umliegenden Bereiche, verschwindet die waagerechte Störung im Bild.
+    }
+    \label{fig:phantom_mensch_sat}
+\end{figure}
+
+\subsection{Zweite Messung}
+
+Für die zweite Messung hatte sich eine Probandin mit Zysten in der Brust
+bereit erklärt. Um die Bildstörungen zu unterdrücken sättigten wir nun mit
+mehreren Sättigerpulsen\footnote{Ein einzelner Puls deckt nur einen
+begrenzten, rechteckigen (bzw. quaderförmigen) Bereich ab.} das umliegende
+Gewebe. Das Amplitudenbild ist in Abbildung~\ref{fig:2015-02-27_25_1_amp} das
+Phasenbild in Abbildung~\ref{fig:2015-02-27_26_1_phase} zu sehen. Man sieht
+deutlich, dass nach wie vor sowohl im Amplituden- als auch im Phasenbild
+Störungen vorhanden sind. Im Vergleich zur vorherigen Messung ist die einzige
+Verbesserung das Verschwinden der waagerechten Störline.
+
+\begin{figure}
+    \begin{minipage}[htbp]{.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Abbildungen/2015-02-27_25_1_amp_kontrast.png}
+        \caption{Amplitudenbild. Keine waagerechte Störlinie mehr. Störung durch Mehrfachabbildung der Brust.}
+        \label{fig:2015-02-27_25_1_amp}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[htbp]{.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Abbildungen/2015-02-27_26_1_phase.png}
+        \caption{Phasenbild. Störung durch Mehrfachabbildung der Brust. Phasensprünge sind noch nicht herausgerechnet.}
+        \label{fig:2015-02-27_26_1_phase}
+    \end{minipage}
+\end{figure}
+
+Bei der Messung an der Probandin gibt es einige Unterschiede zur
+Störungsbeseitigung am Brustphantom. Zum einen hatten wir bei Letzterem nur
+ein Phantom, sodass wir in Phasenkodierrichtung ein geringeres Störsignal
+hatten. Zum anderen waren Phantom und Körper nicht verbunden.
+%TODO Grund für daraus resultierender Störrungsreduktion.
+Bei einer erneuten Messung zur Störungsbeseitigung mussten
+diese Unterschiede beseitigt werden. 
+
+Ein weiterer Punkt war die hohe Anzahl von Sättigern, die vom Tomographen
+durch eine Hintereinanderschaltung mehrerer HF-Pulse im gleichen Abstand
+realisiert wird. Bei einer Verwendung von 5 oder mehr Sättigerpulsen ist daher
+fraglich, ob die durch den ersten Puls entstandene Sättigung bei
+Signalaufnahme überhaupt noch wirksam ist. Deckt der erste Sättiger nun einen
+Bereich ab, aus dem das stärkste Störsignal kommt, könnte dieses wieder
+auftauchen. Es musste also zudem überprüft werden, ob durch die Anzahl oder die
+Reihenfolge der Sättiger ein Unterschied entsteht.
+
+\subsection{Zweite Fehlersuche}
+
+
+
+
+    \chapter{Ergebnis/Ausblick}
+
+    \end{document}
 
 %TODO Wo liegt die Anpassung
 %TODO Steckverbindung
