@@ -1031,9 +1031,11 @@ stark, so dass eine Auswertung vereinfacht wird.
 
     \chapter{Ergebnis/Ausblick}
 
-    \IfFileExists{\bibliographyfile}{
-        \printbibliography
-    }{}
+    \begin{sloppy}
+        \IfFileExists{\bibliographyfile}{
+            \printbibliography
+        }{}
+    \end{sloppy}
 
     \chapter*{Erklärung}
 
