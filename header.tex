@@ -33,11 +33,6 @@
     hyperref=true
 ]{biblatex}
 
-\IfFileExists{\bibliographyfile}{
-    \bibliography{\bibliographyfile}
-    \AtEndDocument{\printbibliography}
-}{}
-    
 % Für \SIunit[]{} und \num in deutschem Stil
 
  \usepackage[output-decimal-marker={,}]{siunitx}

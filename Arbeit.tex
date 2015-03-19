@@ -20,6 +20,8 @@
     2. Gutachter: Prof. Dr. Carsten Urbach
 }
 
+\date{März 2015}
+
 
 \begin{document}
 \maketitle
@@ -28,6 +30,7 @@
 \tableofcontents
 
 \chapter{Einleitung}
+
 
 Brustkrebs ist mit vorraussichtlich über 75000 Neuerkrankungen in Deutschland,
 allein im Jahr 2014, die häufigste bösartige Tumorerkrankung
@@ -1029,11 +1032,26 @@ stark, so dass eine Auswertung vereinfacht wird.
 
     \chapter{Ergebnis/Ausblick}
 
+    \IfFileExists{\bibliographyfile}{
+        \printbibliography
+    }{}
+
+    \chapter*{Erklärung}
+
+    Ich versichere, dass ich diese Arbeit selbständig verfasst und keine
+    anderen als die angegebenen Quellen und Hilfsmittel benutzt sowie die
+    Zitate kenntlich gemacht habe.
+
+    \vspace{10ex}
+
+    Bonn, den \today \hspace{3em} Unterschrift \hrulefill.
+
+
     \end{document}
 
-%TODO Wo liegt die Anpassung
-%TODO Fazit/Zusammenfassung
-%TODO Selbststädnigkeitserklärung
+    %TODO Wo liegt die Anpassung
+    %TODO Fazit/Zusammenfassung
+    %TODO Selbststädnigkeitserklärung
 
-%vim: tw=79
+    %vim: tw=79
 
