@@ -661,9 +661,89 @@ High~Vacuum~Grease} verwendet. Ich hab mich für eine Verwendung von \linebreak
 auch nach längerem Stehen unter Druck gute Laufeigenschaften hat.
 
 
-\subsection{Problem: Kupplung}
+\subsection{Problem: Steckverbindung}
 
-\subsection{Kalibrierung}
+Zu Beginn meiner Arbeit wurde die Steckverbindung zur Befüllung der
+Verschiebevorrichtung (vgl. Abbildung~\ref{fig:aufbau_total}) durch ein
+einfaches beidseitig konisch zulaufendes Kunststoffbauteil realisiert, auf das
+die Schläuche von beiden Seiten aufgesteckt werden konnten. Das Problem
+hierbei war, dass diese mit der Zeit ausleierten, sodass die Dichtheit nicht
+mehr gewährleistet werden konnte. Die bisherige Lösung für dieses Problem war,
+die Schläuche ein stück zu kürzen und weiter zu benutzen. Bei einer endlichen
+Schlauchlänge ist das natürlich nicht optimal. Meine Lösung ist in den
+Abbildungen~\ref{fig:steckverbindung_schema} und
+\ref{fig:steckverbindung_foto} zu sehen.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}
+        \draw[thick] (-1.1,.5) 
+        -- (-1,.5) 
+        to[in=180, out=0] (.2,.0);
+        \draw[thick, fill=gray] (.2,.0)
+        -- (.2,.6)
+        -- (1.6,.6)
+        -- (1.6,.4)
+        -- (.6,.4)
+        -- (.5,.0)
+        -- (.2,.0);
+
+        \draw[thick] (-1.1,.3) 
+        to[in=180, out=0] (.1,-.2)
+        -- (.2,-.2);
+        \draw[thick, fill=gray] (.2,-.2)
+        -- (.2,-.8)
+        -- (1.6,-.8)
+        -- (1.6,-.6)
+        -- (.6,-.6)
+        -- (.5,-.2)
+        -- (.2,-.2);
+
+        \draw[thick, fill=gray] (4,0)
+        -- (2,0)
+        -- (2,.35)
+        -- (2.2,.35)
+        -- (2.2,.2)
+        -- (2.45,.2)
+        -- (2.45,.35)
+        -- (4.,0.35)
+        -- (4.,0.);
+        \draw[thick] (4,0)
+        -- (4.1,0.)
+        to[in=180, out=0] (5.3,-.5);
+
+        \draw[thick,fill=gray] (4,-.2)
+        -- (2,-.2)
+        -- (2,-.55)
+        -- (2.2,-.55)
+        -- (2.2,-.4)
+        -- (2.45,-.4)
+        -- (2.45,-.55)
+        -- (4,-.55)
+        -- (4,-.2);
+        \draw[thick] (4,-.2)                        
+        to[in=180,out=0] (5.2,-.7)
+        -- (5.3,-.7);
+
+        \draw[thick, fill] (2.325,-.5) circle(.08);
+        \draw[thick, fill] (2.325,.3) circle(.08);
+
+
+    \end{tikzpicture}
+    \caption{%
+        Schematische Schnitt durch die Steckverbindungen. Zwei zylinderförmige Aluminiumbauteile werden zusammengesteckt. Durch einen O-Ring am dünneren Teil wird die Verbindung abgedichtet. Die Schläuche sind eingeklebt.
+    }
+    \label{fig:steckverbindung_schema}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=.75\textwidth]{Abbildungen/steckverbindung.png}
+    \caption{%
+        Foto der Steckverbindung. Rechts im Bild ist diese einzeln zu sehen, links in einer Aluminiumhalterung, die dafür sorgt, dass die Bauteile beim Verschieben der Kolben nicht auseinander gedrückt werden. Die Flügelmuttern sorgen für ein einfaches Lösen und Schließen der Halterung.
+    }
+    \label{fig:steckverbindung_foto}
+\end{figure}
 
 \section{Verbesserung des Bildertrages}
 
