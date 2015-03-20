@@ -31,22 +31,22 @@
 
 \chapter{Einleitung}
 
-Brustkrebs ist mit vorraussichtlich über 75000 Neuerkrankungen in Deutschland,
-allein im Jahr 2014, die häufigste bösartige Tumorerkrankung
+Brustkrebs ist mit vorraussichtlich über \num{75000} Neuerkrankungen in
+Deutschland, allein im Jahr 2014, die häufigste bösartige Tumorerkrankung
 \parencite[68]{krebs_in_deutschland}. Die Überlebenschancen sind dabei von
-einer frühen Diagnose abhängig. Die manuelle Palpation \footnote{Abtasten der
+einer frühen Diagnose abhängig. Die manuelle Palpation\footnote{Abtasten der
 Brust} ist die übliche Diagnosetechnik, sie ist jedoch stark von der Erfahrung
 des untersuchenden Arztes abhängig. Tumore unter \SI{2}{\centi\meter} und
 damit im Frühstadium sind dabei schwer zu finden
 \parencite{diagnostik_mammakarzinom}, ebenso tiefer liegende Tumore.
 
-Andere Verfahren, mit denen Tumore aufgespürt werden können, wie Mammographie
-\footnote{Röntgenaufnahme der Brust}, Sonographie
-\footnote{Ultraschalluntersuchung} und DCE-MRT \footnote{MRT mit
-Kontrastmittel} sowie anschließende Gewebeentnahmen sind mit einer zusätzlichen
-körperlichen Belastung verbunden. Zudem werden durch eine hohe Sensitivität bei
-geringer Spezifität falsch-positive Diagnosen gestellt, welche zusätzliche
-psychische Belastungen bedeuten.
+Andere Verfahren, mit denen Tumore aufgespürt werden können, wie
+Mammographie\footnote{Röntgenaufnahme der Brust},
+Sonographie\footnote{Ultraschalluntersuchung} und DCE-MRT\footnote{MRT mit
+Kontrastmittel} sowie anschließende Gewebeentnahmen sind mit einer
+zusätzlichen körperlichen Belastung verbunden. Zudem werden durch eine hohe
+Sensitivität bei geringer Spezifität falsch-positive Diagnosen gestellt,
+welche zusätzliche psychische Belastungen bedeuten.
 
 Die Palpation fußt auf einer Veränderung der elastischen Eigenschaften des
 Gewebes \parencite{elastic_moduli_breast_tissue}.
@@ -89,14 +89,14 @@ genügen. Hierbei ist
     c=\sqrt{\frac{K}{\rho_0}}
 \]
 die Schallgeschwindigkeit im Medium. $\rho_0$ ist die Dichte des Mediums ohne
-Schalleinfluss und $K$ ist das Kompressionsmodul. In Festkörpern muss dieses
-durch das Elastizitätsmodul $E$ ersetzt werden. Hier sind auch
+Schalleinfluss und $K$ ist der Kompressionsmodul. In Festkörpern muss dieses
+durch der Elastizitätsmodul $E$ ersetzt werden. Hier sind auch
 Transversalwellen möglich.
 
 Für die Ausbreitung von Schall, insbesondere beim Übergang zwischen zwei
 Medien, definiert man die Schallimpedanz
 \[
-    Z=\sqrt{K\rho_0}.
+    Z:=\sqrt{K\rho_0}.
 \]
 Haben zwei Medien eine unterschiedliche Impedanz, werden Schallwellen an der
 Grenzfläche teilweise reflektiert. Bei senkrechtem Einfall ist der
@@ -113,9 +113,9 @@ zusammen. Schall im Frequenzbereich \SI{20}{\kilo\hertz} bis
 
 \subsection{Schallstrahlungskraft}
 
-Die Dichteschwankung im Medium kann man sich als ein konstantes Ansaugen und
+Die Dichteschwankung im Medium kann man sich als ein konstantes Anziehen und
 Abstoßen von Teilchen vorstellen. Bei einer hohen Schwingungsfrequenz verhalten
-sich diese beim Abstoßen anders als beim Ansaugen. Dehnt sich das Medium beim
+sich diese beim Abstoßen anders als beim Anziehen. Dehnt sich das Medium beim
 Zurücksaugen nicht schnell genug aus, strömen seitlich Teilchen nach. Da die
 Teilchen stärker weggestoßen als zurückgezogen werden, wird so eine Strömung in
 Ausbreitungsrichtung des (Ultra-)schalls erzeugt, die einen Druck auf
@@ -137,11 +137,11 @@ Eine Möglichkeit zur Erzeugung von Ultraschall nutzt den
 
 In piezoelektrischen Materialien kann durch mechanischen Druck ein zur
 Druckänderung proportionales elektrisches Feld hervorgerufen werden. Dadurch
-ist eine elektrische Spannung abgreifbar. Wird nun umgekehrt eine Spannung an
-ein solches Material angelegt, staucht oder streckt dieses sich in eine
-Richtung. Eine Wechselspannung ruft demnach ein periodisches Ausdehnen und
-Zusammenziehen hervor, welches sich als Schall im Medium ausbreitet. Ist die
-Frequenz der Wechselspannung ausreichend hoch, entsteht Ultraschall.
+ist eine elektrische Spannung abgreifbar. Wird nun umgekehrt eine elektrische
+Spannung an ein solches Material angelegt, staucht oder streckt dieses sich in
+eine Richtung. Eine Wechselspannung ruft demnach ein periodisches Ausdehnen
+und Zusammenziehen hervor, welches sich als Schall im Medium ausbreitet. Ist
+die Frequenz der Wechselspannung ausreichend hoch, entsteht Ultraschall.
 
 \subsection{Schallfeld}
 
@@ -155,7 +155,7 @@ Dieser Abstand kann durch den Einsatz einer Linse verringert werden.
     \centering
     \includegraphics[width=.8\textwidth]{Abbildungen/US_Feld.pdf}
     \caption{%
-        Schallfeld eines kreisförmigen Ultraschallemitters. A) zeigt den Durchmesser des Schallfeldes. In B) ist dessen Intensitätsverlauf zu sehen, $x$ bezeichnet hier den Abstand zum Emitter und $I/I_0$ die relative Intensität an. (nach \parencite{bildgebende_verfahren}).
+        Schallfeld eines kreisförmigen Ultraschallemitters. A) zeigt den Durchmesser des Schallfeldes. In B) ist dessen Intensitätsverlauf zu sehen, $x$ bezeichnet hier den Abstand zum Emitter und $I/I_0$ die relative Intensität an (nach \parencite{bildgebende_verfahren}).
     }
     \label{fig:us-feld}
 \end{figure}
@@ -165,18 +165,19 @@ Dieser Abstand kann durch den Einsatz einer Linse verringert werden.
 Gewebe kann durch Ultraschall auf zwei Arten beschädigt werden. Zum einen kann
 durch die Absorbtion des Ultraschalls die Temperatur im Gewebe angehoben
 werden. Zum anderen kann durch Kaviation, also dem Bilden und Kollabieren von
-Gasbläschen in der Unter- bzw. Überdruckphase des Ultraschalls, Gewebe zerstört
-werden. Die amerikanische \emph{Food and Drug Administration (FDA)} hat für die
-Grenzwerte zwei Indizes entwickelt. Der \emph{TI}\footnote{thermal index}
-beschreibt das Verhältnis von Schallausgangsleistung zu der Leistung, die
-benötigt wird, Gewebe um \SI{1}{\degree} zu erwärmen. Der
+Gasbläschen in der Unter- bzw. Überdruckphase des Ultraschalls, Gewebe
+zerstört werden. Die amerikanische \emph{Food and Drug Administration (FDA)}
+hat für die Grenzwerte zwei Indizes entwickelt. Der \emph{TI}\footnote{thermal
+index} beschreibt das Verhältnis von Schallausgangsleistung zu der Leistung,
+die benötigt wird, Gewebe um \SI{1}{\degree} zu erwärmen. Der
 \emph{MI}\footnote{mechanical index} ist der Quotient aus dem Druck im Minimum
 der Unterdruckphase in \si{\mega\pascal} im Fokus und der Wurzel aus der
 Frequenz des Ultraschalls in \si{\mega\hertz}
 \parencite{FDA_ultrasound_limits}. Die FDA hat als Grenzwerte
 $\text{MI}=\num{1.9}$ und $\text{TIS}=6$ festgelegt, wobei \emph{TIS} der
-\emph{TI} bezogen auf Weichteilgewebe ist.
-Der für diese Arbeit genutze Ultraschall untschreitet mit $\text{MI}=\num{0.4}$ und $\text{TIS}\approx2$ \parencite{diss_radicke} diese Grenzwerte deutlich.
+\emph{TI} bezogen auf Weichteilgewebe ist.  Der für diese Arbeit genutze
+Ultraschall untschreitet mit $\text{MI}=\num{0.4}$ und $\text{TIS}\approx2$
+\parencite{diss_radicke} diese Grenzwerte deutlich.
 
 \section{Magnet-Resonanz-Tomographie}
 
@@ -190,11 +191,11 @@ zusammenhängt. $\gamma$ ist dabei das gyromagnetische Verhältnis, welches für
 verschiedene Teilchen unterschiedliche Werte annimmt. Es ist leicht zu sehen,
 dass Spin und magnetisches Moment in die gleiche Richtung zeigen. Da in der
 Medizin vor allem Wasserstoffkerne eine Rolle spielen, betrachte ich im
-Folgenden nur noch das Proton mit der Spinquantenzahl $s = \half$ und $\gamma =
+Folgenden nur noch das Proton mit der Spinquantenzahl $s = \shalf$ und $\gamma =
 2\piup\cdot\SI{42.6}{\mega\hertz\per\tesla}$.
 
-Wird durch ein konstantes externes Magnetfeld $B_z$ eine Richtung vorgegeben,
-hat der Spin zwei Einstellmöglichkeiten:
+Wird durch ein konstantes externes Magnetfeld $\vec B = B_z \vec e_z$ eine
+Richtung vorgegeben, hat der Spin zwei Einstellmöglichkeiten:
 \[
     S_z = \pm\half\hbar.
 \]
@@ -207,7 +208,11 @@ Da der Betrag des Spins
 \[
     \abs{\vec S} = \sqrt{s(s+1)}\hbar = \sqrt{\frac34}\hbar
 \]
-beträgt, kann er nicht parallel oder antiparallel zum Magnetfeld stehen.
+beträgt, kann er nicht parallel oder antiparallel zum Magnetfeld stehen. So
+entsteht ein Drehmoment
+\[
+    \vec M = \vec \mu \times \vec B.
+\]
 Dadurch präzediert er mit der sogenannten Larmor-Frequenz um die $z$-Achse:
 \[
     \omega_0 = \gamma B_z.
@@ -233,20 +238,21 @@ Magnetfeld von $B_z = \SI{1}{\tesla}$ erhalten wir so ein Verhältnis von
     \frac{N_\uparrow}{N_\downarrow} = \num{1.0000068}.
 \]
 Der Überschuss von Spin-up-Teilchen scheint sehr gering zu sein, bedenkt man
-jedoch, dass \SI{1}{\milli\meter\cubed} Wasser über \num{10e22} Wasserstoffkerne
+jedoch, dass \SI{1}{\milli\meter\cubed} Wasser über \num{e19} Wasserstoffkerne
 enthält, wird schnell klar, dass sich eine messbare Magnetisierung einstellt.
 Wir können daher von nun an ein Ensemble vieler Spins betrachten, das ein
 makroskopisches magnetische Moment
 \[
-    \vec m = m_z
+    \vec m = m_z\vec m_z
 \]
-besitzt. Da die $x$- und $y$-Komponente jedes einzelnen Spins nicht bestimmt ist, sind sie insgesamt gleich verteilt und heben sich in der Summe daher auf.
+besitzt. Da die $x$- und $y$-Komponente jedes einzelnen Spins nicht bestimmt
+ist, sind sie insgesamt gleich verteilt und heben sich in der Summe daher auf.
 
 \subsection{Kernspinresonanz}
 
-Legt man zusätzlich zum Konstanten Magnetfeld $B_z$ ein transversales mit der
+Legt man zusätzlich zum konstanten Magnetfeld $B_z$ ein transversales mit der
 Larmorfrequenz rotierendes Wechselfeld $\vec B_\text{T}$ (\emph{Hochfrequenz-}
-bzw \emph{HF-Puls}) an, dreht sich die Magnetisierung spiralförmig aus der
+oder \emph{HF-Puls}) an, dreht sich die Magnetisierung spiralförmig aus der
 Gleichgewichtslage heraus, bis sie nach einer Zeit $t_{\frac\piup2}$ in der
 $xy$-Ebene rotiert. Lässt man das Wechselfeld länger eingeschaltet, wird die
 Magnetisierung nach einer Zeit $t_{\piup}$ sogar vollständig umgeklappt. Man
@@ -440,8 +446,9 @@ Der Vorgang wird \emph{Spin-Spin-} oder \emph{Querrelaxation} genannt, die Zeit 
 Der beobachtete Zerfall der Quermagnetisierung ist meist deutlich schneller,
 als durch die Theorie erklärbar. Die Ursache für diese effektive Zeitkonstante
 $T_2^*$ ist, dass die vielen Ensembles innerhalb eines untersuchten
-Volumenelements durch leichte Inhomogenitäten des Magnetfeldes unterschiedlich
-schnell präzedieren. Dadurch laufen einige vor, andere hinterher.
+Volumenelements durch leichte Inhomogenitäten des externenMagnetfeldes
+unterschiedlich schnell präzedieren. Dadurch laufen einige vor, andere
+hinterher.
 
 Um dennoch den korrekten Wert für $T_2$ messen zu können, werden
 \emph{Spin-Echos} verwendet. Hier gibt es verschiedene Möglichkeiten von denen
@@ -450,7 +457,7 @@ ich nur eine vorstellen möchte.
 Nachdem durch einen $\frac\piup2$-Puls die Magnetisierung in die $xy$-Ebene
 gekippt wurde, nimmt das Signal schnell ab. Die schneller präzedierenden
 Ensembles laufen vor, die langsameren nach. Nach einer Zeit $\frac\tau2$ wird
-nun ein $\piup$-Puls eingestrahlt, wodurch die Magnetisierung gespiegelt wird.
+nun ein $\piup$-Puls eingestrahlt, wodurch die Magnetisierung invertiert wird.
 Dadurch liegen die schnelleren Ensembles jetzt hinter und die langsameren vor
 dem Durchschnitt. Nach weiteren $\frac\tau2$ sind daher alle Ensembles wieder
 so weit in Phase, wie sie es ohne Inhomogenitäten wären. Dies ist das
@@ -461,7 +468,7 @@ man in den Echo-Amplituden die exponentielle Querrelaxation mit $T_2$ erkennen.
 
 Die Antenne, mit der die Transversalmagnetisierung aufgenommen wird, sieht
 immer nur das gesamte Signal, das heißt die vektorielle Summe aller
-Magnetisierungn. Um jedem einzelnen Voxel\footnote{volumic pixel, also ein
+Magnetisierungn. Um jedem einzelnen Voxel\footnote{„volumic pixel“, also ein
 Volumenelement} ein Signal zuordnen zu können, werden eine Reihe von
 Magnetfeldgradienten verwendet (vergleiche
 Abbildung~\ref{fig:bew-sens-sequenz}).
@@ -482,16 +489,24 @@ $x$-Richtung unterschieden werden.
     \centering
     \includegraphics[width=.7\textwidth]{Abbildungen/sediffmono.pdf}
     \caption{%
-        Bewegungssensitive MRT-Sequenz mit Gradienten zur Ortsauflösung. Durch den Ultraschall wird eine Gewebeverschiebung verursacht, die durch die grauen Gradienten $G_x$ sichtbar gemacht werden kann.
+        Bewegungssensitive MRT-Sequenz mit Gradienten zur Ortsauflösung. Der Ultraschall verursacht eine Gewebeverschiebung, die durch die grauen Gradienten $G_x$ sichtbar gemacht werden kann.
     }
     \label{fig:bew-sens-sequenz}
 \end{figure}
 
 \subsection{Bewegungssensitive Sequenzen}
 
-Um eine Gewebeverschiebung im MRT-Bild sichtbar machen zu können, werden symmetrisch um den $\piup$-Puls zwei identische Gradienten $G_x$ der Dauer $T_G$ geschaltet (Abbildung~\ref{fig:bew-sens-sequenz}, grau). Der erste Gradient sorgt dabei für eine Phasenverschiebung abhängig von der $x$-Koordinate. Der $\piup$-Puls spiegelt nun die Magnetisierung, da er sie um genau $\piup$ dreht. Findet keine Bewegung statt, macht der zweite Gradient die Phasenverschiebung daher rückgängig. Ist das Gewebe allerdings bewegt worden, findet keine vollständige Rephasierung statt. Die Phasendifferenz ist dann konstant und kann mit
+Um eine Gewebeverschiebung im MRT-Bild sichtbar machen zu können, werden
+symmetrisch um den $\piup$-Puls zwei identische Gradienten $G_x$ der Dauer
+$T_G$ geschaltet (Abbildung~\ref{fig:bew-sens-sequenz}, grau). Der erste
+Gradient sorgt dabei für eine Phasenverschiebung abhängig von der
+$x$-Koordinate. Der $\piup$-Puls spiegelt nun die Magnetisierung, da er sie um
+genau $\piup$ dreht. Findet keine Bewegung statt, macht der zweite Gradient
+die Phasenverschiebung daher rückgängig. Ist das Gewebe allerdings bewegt
+worden, findet keine vollständige Rephasierung statt. Die Phasendifferenz ist
+dann konstant und kann mit
 \begin{equation}
-    \Deltaup \phi = \gamma \cdot G_x T_G \Deltaup x \label{eq:phi_x}
+    \Deltaup \phi = \gamma G_x T_G \Deltaup x \label{eq:phi_x}
 \end{equation}
 in eine Verschiebung umgerechnet werden.
 
@@ -534,12 +549,26 @@ die Leistungsaufnahme zu maximieren \parencite{dipl_kofahl}.
     \centering
     \includegraphics[width=.8\textwidth]{Abbildungen/elektronik.pdf}
     \caption{%
-        Aufbau der Elektronik zur Synchronisation des Ultraschalls mit der bewegungssensitiven Spin-Echo-Sequenz. Der $\piup$-Puls des Tomographen wird von der Antenne aufgefangen und als Logikpuls an den Signalgenerator weiter gegeben. Dessen Signal wird verstärkt und, wenn es innerhalb der Grenzwerte liegt an den Emitter weitergegeben.
+        Aufbau der Elektronik zur Synchronisation des Ultraschalls mit der bewegungssensitiven Spin-Echo-Sequenz. Der $\piup$-Puls des Tomographen wird von der Antenne aufgefangen und als Logikpuls an den Signalgenerator weiter gegeben. Dessen Signal wird verstärkt und, wenn es innerhalb der Grenzwerte liegt, an den Emitter weitergegeben.
     }
     \label{fig:elektronik}
 \end{figure}
 
-Der verwendete Emitter ist in Abbildung~\ref{fig:emitter} (A) zu sehen. Der Aufbau ist schematisch in Abbildung~\ref{fig:emitter} (B) dargestellt. Die Piezokeramik, eine Sonderanfertigung von PI Ceramics GmbH, Lederhose, wurde in einen Leiterplatinenring eingelassen, bei dem an der einen Seite am Rand \SI{3.2}{\milli\meter} der Kupferbeschichtung entfernt wurden. Um einen elektrischen Kontakt herzustellen wurden Kupferbeschichtungen und Keramik mit Silberfädchen verbunden. Ein weiterer Ring wurde an den ersten gelötet und mit einem Kupferdeckel verschlossen. Der so entstandene Hohlraum kann über zwei Anschlüsse mit Helium zur Kühlung befüllt werden. In die Vertiefung zwischen die beiden Ringen wurde die Phase eines BNC-Kabels gelötet, die Masse an den Kupferdeckel und an die Vorderseite der Piezokeramik. Dadurch ist der Emitter Elektromagnetisch abgeschirmt. Auf der Piezokeramik befindet sich eine kokave Linse, die den Fokus auf eine Entfernung von $N = \SI{22}{\centi\meter}$ verschiebt. Dieser hat einen Durchmesser von \SI{4}{\milli\meter} und eine Länge von \SI{5}{\centi\meter} \parencite{diss_radicke}.
+Der verwendete Emitter ist in Abbildung~\ref{fig:emitter} (A) zu sehen. Der
+Aufbau ist schematisch in Abbildung~\ref{fig:emitter} (B) dargestellt. Die
+Piezokeramik, eine Sonderanfertigung (PI Ceramics GmbH, 07589 Lederhose),
+wurde in einen Leiterplatinenring eingelassen, bei dem an der einen Seite am
+Rand \SI{3.2}{\milli\meter} der Kupferbeschichtung entfernt wurden. Um einen
+elektrischen Kontakt herzustellen wurden Kupferbeschichtungen und Keramik mit
+Silberfädchen verbunden. Ein weiterer Ring wurde an den ersten gelötet und mit
+einem Kupferdeckel verschlossen. Der so entstandene Hohlraum kann über zwei
+Anschlüsse mit Helium zur Kühlung befüllt werden. In die Vertiefung zwischen
+die beiden Ringen wurde die Phase eines BNC-Kabels gelötet, die Masse an den
+Kupferdeckel und an die Vorderseite der Piezokeramik. Dadurch ist der Emitter
+Elektromagnetisch abgeschirmt. Auf der Piezokeramik befindet sich eine kokave
+Linse, die den Fokus auf eine Entfernung von $N = \SI{22}{\centi\meter}$
+verschiebt. Dieser hat einen Durchmesser von \SI{4}{\milli\meter} und eine
+Länge von \SI{5}{\centi\meter} \parencite{diss_radicke}.
 
 \begin{figure}
     \centering
@@ -565,8 +594,8 @@ Druckausgleichsbehälter verbunden, der die Schrittmotoren beim Zurückziehen de
 Kolben unterstützt. Der größte der drei Verschiebezylinder ist fest mit einer
 Plexiglasplatte verklebt, die eine Fixierung in einer wassergefüllten Wanne
 ermöglicht. Erst durch das Wasser kann sich der Ultraschall mit einer Frequenz
-von \SI{2.5}{\mega\hertz} ausbreiten. In Luft ist dies nicht möglich. Zudem wird
-die Reflektion beim Übergang zur Brust dadurch möglichst klein gehalten.
+von \SI{2.5}{\mega\hertz} ausbreiten. In Luft ist dies nicht möglich. Zudem
+wird die Reflektion beim Übergang zur Brust dadurch möglichst klein gehalten.
 
 Da in der Wand zwischen Kontroll- und MRT-Raum nur zwei Löcher mit wenigen
 Zentimetern Durchmesser zu Verfügung stehen, sind die Schläuche mit
@@ -613,7 +642,7 @@ Fokuslänge mehrere Zentimeter beträgt \parencite{dipl_kofahl}.
 An der vorhandenen Versuchsvorrichtung bestanden zu Anfang meiner Arbeit einige
 Probleme die es zu verbessern galt. Zum Einen ließen sich die Kolben nach
 einiger Zeit des Stehens nur sehr schwergängig in ihren Zylindern bewegen,
-Daher musste man diese vor der Benutzung per Hand lockern, um die
+daher musste man diese vor der Benutzung per Hand lockern, um die
 Schrittmotoren nicht zu überfordern. Zum Anderen trat Luft bei Benutzung der
 Apperatur in das System ein, wodurch nach einigem Fahren die Eichung der
 Verschiebung nicht mehr stimmte.  
@@ -666,7 +695,7 @@ verwendeten zwei.
 
 Ein weiterer Faktor ist die Wahl des Schmiermittels. Bisher wurde das
 Silikonbasierte \linebreak \emph{Dow~Corning\textsuperscript{\textregistered}
-High~Vacuum~Grease} verwendet. Ich hab mich für eine Verwendung von \linebreak
+High~Vacuum~Grease} verwendet. Ich habe mich für eine Verwendung von \linebreak
 \emph{Hochleistungs PTFE-Spray} von Caramba entschieden, da dieses
 auch nach längerem Stehen unter Druck gute Laufeigenschaften hat.
 
@@ -760,17 +789,18 @@ Abbildungen~\ref{fig:steckverbindung_schema} und
 \subsection{Erste Messung}
 
 In einer ersten Messung untersuchten wir eine Probandin mit einem auf
-MRT-Bildern deutlich sichtbaren Fibroadenom. Das Amplituden- bzw- Phasenbild
-der Messung mit Ultraschall ist in Abbildung~\ref{fig:prob1_ampl_US} bzw.
-\ref{fig:prob1_phas_US} zu sehen.  Für eine Auswertung benötigen wir nur das
-Phasenbild. Die Phasenwinkel 0 und $2\piup$ sind nicht unterscheidbar, daher
-entstehen im Bild schwarz-weiße Phasensprünge. Diese müssen vor einer weiteren
-Auswertung herausgerechnet werden. Dazu wurde ein von Sebastian Theilenberg
-implementiertes Programm verwendet. In Abbildung~\ref{fig:prob1_unwrapped} ist
-das korrigierte Bild zu sehen. Zudem wurde hier nur der Bereich der Brust
-ausgewählt und ein Untergrund abgezogen. Man erkennt deutlich, dass nicht alle
-Phasensprünge herausgerechnet werden konnten. Dies ist ein erster Hinweiß auf
-zu starke Bildstörungen.
+MRT-Bildern deutlich sichtbaren Fibroadenom\footnote{gutartiger Tumor im
+Drüsengewebe}. Amplituden- und Phasenbild der Messung mit Ultraschall sind in
+den Abbildungen~\ref{fig:prob1_ampl_US} und \ref{fig:prob1_phas_US} zu sehen.
+Für eine Auswertung benötigen wir nur das Phasenbild. Die Phasenwinkel 0 und
+$2\piup$ sind nicht unterscheidbar, daher entstehen im Bild schwarz-weiße
+Phasensprünge. Diese müssen vor einer weiteren Auswertung herausgerechnet
+werden. Dazu wurde ein von Sebastian Theilenberg implementiertes Programm
+verwendet. In Abbildung~\ref{fig:prob1_unwrapped} ist das korrigierte Bild zu
+sehen. Zudem wurde hier nur der Bereich der Brust ausgewählt und ein
+Untergrund abgezogen. Man erkennt deutlich, dass nicht alle Phasensprünge
+herausgerechnet werden konnten. Dies ist ein erster Hinweiß auf zu starke
+Bildstörungen.
 
 
 \begin{figure}[htbp]
@@ -813,7 +843,7 @@ zu starke Bildstörungen.
     \end{minipage}
 \end{figure}
 
-Mit Gleichung \ref{eq:phi_x} kann die Phasenverschiebung in eine
+Mit Gleichung \eqref{eq:phi_x} kann die Phasenverschiebung in eine
 Gewebeverschiebung umgerechnet werden. Dies ist in
 Abbildung~\ref{fig:prob1_displacement} dargestellt. Da uns der Verlauf parallel
 zum Ultraschall interessiert, schauen wir uns die Verschiebung entlang dreier
@@ -938,12 +968,12 @@ werden.
 
 Ein weiterer Punkt war die hohe Anzahl von Sättigern, die vom Tomographen
 durch eine Hintereinanderschaltung mehrerer HF-Pulse im gleichen Abstand
-realisiert wird. Bei einer Verwendung von 5 oder mehr Sättigerpulsen ist daher
-fraglich, ob die durch den ersten Puls entstandene Sättigung bei
+realisiert wird. Bei einer Verwendung von fünf oder mehr Sättigerpulsen ist
+daher fraglich, ob die durch den ersten Puls entstandene Sättigung bei
 Signalaufnahme überhaupt noch wirksam ist. Deckt der erste Sättiger nun einen
 Bereich ab, aus dem das stärkste Störsignal kommt, könnte dieses wieder
-auftauchen. Es musste also zudem überprüft werden, ob durch die Anzahl oder die
-Reihenfolge der Sättiger ein Unterschied entsteht.
+auftauchen. Es musste also zudem überprüft werden, ob durch die Anzahl oder
+die Reihenfolge der Sättiger ein Unterschied entsteht.
 
 \subsection{Zweite Fehlersuche}
 
