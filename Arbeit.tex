@@ -31,7 +31,7 @@
 
 \chapter{Einleitung}
 
-Brustkrebs ist mit vorraussichtlich über \num{75000} Neuerkrankungen in
+Brustkrebs ist mit schätzungsweise über \num{75000} Neuerkrankungen in
 Deutschland, allein im Jahr 2014, die häufigste bösartige Tumorerkrankung
 \parencite[68]{krebs_in_deutschland}. Die Überlebenschancen sind dabei von
 einer frühen Diagnose abhängig. Die manuelle Palpation\footnote{Abtasten der
@@ -49,13 +49,13 @@ Sensitivität bei geringer Spezifität falsch-positive Diagnosen gestellt,
 welche zusätzliche psychische Belastungen bedeuten.
 
 Die Palpation fußt auf einer Veränderung der elastischen Eigenschaften des
-Gewebes \parencite{elastic_moduli_breast_tissue}.
-Diese wird auch durch einen neuen Ansatz genutzt, einer Kombination
-von Ultraschall und Magnet-Resonanz-Tomographie (\emph{MRT}). Hierbei wird ein
-Ultraschallpuls in das Brustgewebe eingekoppelt. Durch das MRT wird die dadurch
-verursachte Gewebeverschiebung sichtbar gemacht und da diese von den
-elastischen Eigenschaften abhängt, können Veränderungen des Gewebes so sichtbar
-gemacht werden.
+Gewebes \parencite{elastic_moduli_breast_tissue}.  Diese wird auch durch einen
+neuen Ansatz genutzt, einer Kombination von \emph{Ultraschall} und
+\emph{Magnet-Resonanz-Tomographie} (\emph{MRT}). Hierbei wird ein
+Ultraschallpuls in das Brustgewebe eingekoppelt. Durch das MRT wird die
+dadurch verursachte Gewebeverschiebung sichtbar gemacht und da diese von den
+elastischen Eigenschaften abhängt, können Veränderungen des Gewebes so
+sichtbar gemacht werden.
 
 Nach erfolgreichen Versuchen, bei denen Einschlüsse, die Läsionen simulieren
 sollten, in Brustphantomen entdeckt und unterschieden werden konnten
@@ -70,7 +70,7 @@ Damit während der Untersuchung der Ultraschallstrahl an jede beliebige Stelle
 der Brust gelangt wurde eine hydraulische Verschiebevorrichtung entwickelt und
 instand gesetzt. Im ersten Teil meiner Arbeit beschäftige ich mit der Behebung
 von Problemen, die bei ersten Messungen aufgetreten sind. Im zweiten Teil
-befasse ich mich mit der Bildqualität.
+befasse ich mich mit der Verbesserung der Bildqualität.
 
 \chapter{Physikalische Grundlagen}
 
@@ -89,8 +89,8 @@ genügen. Hierbei ist
     c=\sqrt{\frac{K}{\rho_0}}
 \]
 die Schallgeschwindigkeit im Medium. $\rho_0$ ist die Dichte des Mediums ohne
-Schalleinfluss und $K$ ist der Kompressionsmodul. In Festkörpern muss dieses
-durch der Elastizitätsmodul $E$ ersetzt werden. Hier sind auch
+Schalleinfluss und $K$ ist der Kompressionsmodul. In Festkörpern muss dieser
+durch den Elastizitätsmodul $E$ ersetzt werden. Hier sind auch
 Transversalwellen möglich.
 
 Für die Ausbreitung von Schall, insbesondere beim Übergang zwischen zwei
@@ -113,21 +113,25 @@ zusammen. Schall im Frequenzbereich \SI{20}{\kilo\hertz} bis
 
 \subsection{Schallstrahlungskraft}
 
-Die Dichteschwankung im Medium kann man sich als ein konstantes Anziehen und
-Abstoßen von Teilchen vorstellen. Bei einer hohen Schwingungsfrequenz verhalten
-sich diese beim Abstoßen anders als beim Anziehen. Dehnt sich das Medium beim
-Zurücksaugen nicht schnell genug aus, strömen seitlich Teilchen nach. Da die
-Teilchen stärker weggestoßen als zurückgezogen werden, wird so eine Strömung in
-Ausbreitungsrichtung des (Ultra-)schalls erzeugt, die einen Druck auf
-nachfolgende Teilchen hervorruft. Durch diesen \emph{Schallstrahlungsdruck}
-wird eine messbare Kraft ausgeübt, daher spricht man auch von
-\emph{Schallstrahlungskraft}. 
+Die Dichteschwankung im Medium kann man sich als ein sich ständig
+abwechselndes Anziehen und Abstoßen von Teilchen vorstellen. Bei einer hohen
+Schwingungsfrequenz verhalten sich diese beim Abstoßen anders als beim
+Anziehen. Dehnt sich das Medium beim Zurücksaugen nicht schnell genug aus,
+strömen seitlich Teilchen nach. Da die Teilchen stärker weggestoßen als
+zurückgezogen werden, wird so eine Strömung in Ausbreitungsrichtung des
+(Ultra-)schalls erzeugt, die einen Druck auf nachfolgende Teilchen hervorruft.
+Durch diesen \emph{Schallstrahlungsdruck} wird eine messbare Kraft ausgeübt,
+daher spricht man auch von \emph{Schallstrahlungskraft}. 
 
-In elastischem Material, wie menschlichem Gewebe stellt sich nach einigen Millisekunden durch das Gleichgewicht von Schallstrahlungs- und Rückstellkraft  eine konstante Verschiebung ein. Die Stärke der Verschiebung $\Deltaup x$ hängt wegen 
+In elastischem Material, wie menschlichem Gewebe, stellt sich nach einigen
+Millisekunden durch das Gleichgewicht von Schallstrahlungs- und
+Rückstellkraft  eine konstante Verschiebung ein. Die Stärke der Verschiebung
+$\Deltaup x$ hängt wegen 
 \[
     F_\text{rück} = F_\text{Schall} \propto E\cdot\Deltaup x
 \]
-vom Elastizitätsmodul des Gewebes ab. Festeres Gewebe wird also weniger stark verschoben als weicheres.
+vom Elastizitätsmodul des Gewebes ab. Festeres Gewebe wird also weniger stark
+verschoben als weicheres.
 
 
 \subsection{Erzeugung}
@@ -183,7 +187,7 @@ Ultraschall untschreitet mit $\text{MI}=\num{0.4}$ und $\text{TIS}\approx2$
 
 \subsection{Grundlagen}
 
-Spinbehaftete Teilchen, wie zum Beispiel Protonen oder Neutronen haben ein magnetisches Moment, welches mit dem Spin über
+Spinbehaftete Teilchen, wie zum Beispiel Protonen oder Neutronen, haben ein magnetisches Moment, welches mit dem Spin über
 \[
     \vec\mu = \gamma\vec S
 \]
@@ -359,7 +363,9 @@ berechnen.
     \end{minipage}
 \end{figure}
 
-Die rotierende Magnetisierung kann durch senkrecht auf der $x$- oder $y$-Achse stehende Antennenspulen sichtbar gemacht werden. In diesen wird durch den sich veränderden magnetischen Fluss ein Wechselstrom
+Die rotierende Magnetisierung kann durch senkrecht auf der $x$- oder $y$-Achse
+stehende Antennenspulen sichtbar gemacht werden. In diesen wird durch den sich
+verändernden magnetischen Fluss ein Wechselstrom
 \[
     I(t) \propto M_\text{T} \dsin{\omega_L t}
 \]
@@ -372,8 +378,9 @@ induziert.
 \subsection{Relaxation}
 
 Ist der HF-Puls abgeklungen, verbleibt die Magnetisierung nicht in ihrem
-Zustand. Durch Wechselwirkung mit benachbarten Atomen relaxiert die Längsmagnetisierung $M_z$ zu ihrem
-thermischen Gleichgewichtszustand $M_0$. Diese \emph{Sättigungsrückgewinnung} verläuft exponentiell:
+Zustand. Durch Wechselwirkung mit benachbarten Atomen relaxiert die
+Längsmagnetisierung $M_z$ zu ihrem thermischen Gleichgewichtszustand $M_0$.
+Diese \emph{Sättigungsrückgewinnung} verläuft exponentiell (vgl. Abbildung~\ref{fig:laengs}):
 \[
     M_z(t) = M_0\del{1-\dexp{-\frac{t}{T_1}}}.
 \]
@@ -411,6 +418,7 @@ Der Vorgang wird \emph{Spin-Spin-} oder \emph{Querrelaxation} genannt, die Zeit 
         \caption{%
             Sättigungsrückgewinnung nach einem $\frac\piup2$-Puls.
     }
+    \label{fig:laengs}
 \end{minipage}
 \hfill
 \begin{minipage}[htbp]{.45\textwidth}
@@ -437,21 +445,22 @@ Der Vorgang wird \emph{Spin-Spin-} oder \emph{Querrelaxation} genannt, die Zeit 
     \caption{%
         Vergleich der Querrelaxation mit $T_2^*$ und $T_2$ nach einem $\frac\piup2$-Puls. 
     }
+    \label{fig:quer}
 \end{minipage}
 \end{figure}
 
 
-\subsection{Spin-Echo-Sequenzen}
+\subsection{Spin-Echo}
 
-Der beobachtete Zerfall der Quermagnetisierung ist meist deutlich schneller,
-als durch die Theorie erklärbar. Die Ursache für diese effektive Zeitkonstante
-$T_2^*$ ist, dass die vielen Ensembles innerhalb eines untersuchten
-Volumenelements durch leichte Inhomogenitäten des externenMagnetfeldes
-unterschiedlich schnell präzedieren. Dadurch laufen einige vor, andere
-hinterher.
+Der beobachtete Zerfall der Quermagnetisierung ist meist deutlich schneller
+(vgl. Abbildung~\ref{fig:quer}), als durch die Theorie erklärbar. Die Ursache
+für diese effektive Zeitkonstante $T_2^*$ ist, dass die vielen Ensembles
+innerhalb eines untersuchten Volumenelements durch leichte Inhomogenitäten des
+externen Magnetfeldes unterschiedlich schnell präzedieren. Dadurch laufen
+einige vor, andere hinterher.
 
 Um dennoch den korrekten Wert für $T_2$ messen zu können, werden
-\emph{Spin-Echos} verwendet. Hier gibt es verschiedene Möglichkeiten von denen
+\emph{Spin-Echos} verwendet. Hier gibt es verschiedene Möglichkeiten, von denen
 ich nur eine vorstellen möchte.
 
 Nachdem durch einen $\frac\piup2$-Puls die Magnetisierung in die $xy$-Ebene
@@ -468,7 +477,7 @@ man in den Echo-Amplituden die exponentielle Querrelaxation mit $T_2$ erkennen.
 
 Die Antenne, mit der die Transversalmagnetisierung aufgenommen wird, sieht
 immer nur das gesamte Signal, das heißt die vektorielle Summe aller
-Magnetisierungn. Um jedem einzelnen Voxel\footnote{„volumic pixel“, also ein
+Magnetisierungen. Um jedem einzelnen Voxel\footnote{„volumic pixel“, also ein
 Volumenelement} ein Signal zuordnen zu können, werden eine Reihe von
 Magnetfeldgradienten verwendet (vergleiche
 Abbildung~\ref{fig:bew-sens-sequenz}).
@@ -494,7 +503,7 @@ $x$-Richtung unterschieden werden.
     \label{fig:bew-sens-sequenz}
 \end{figure}
 
-\subsection{Bewegungssensitive Sequenzen}
+\subsection{Bewegungssensitive Spin-Echo-Sequenzen}
 
 Um eine Gewebeverschiebung im MRT-Bild sichtbar machen zu können, werden
 symmetrisch um den $\piup$-Puls zwei identische Gradienten $G_x$ der Dauer
@@ -515,11 +524,11 @@ in eine Verschiebung umgerechnet werden.
 
 \section{Studie}
 
-In einer Studie an zehn Patientinnen mit gesichertem medizinischem Befund soll
+In einer Studie an zehn Probandinnen mit gesichertem medizinischen Befund soll
 überprüft werden, ob Läsionen innerhalb der Brust nicht nur sichtbar gemacht
 werden können, sondern auch erkannt werden kann, um welche Art der Läsion
 (gutartiger/bösartiger Tumor, Zyste) es sich handelt. Dazu wird Ultraschall in
-die Brust eingekoppelt und die durch den Ultraschallstrahldruck hervorgerufene
+die Brust eingekoppelt und die durch die Schallstrahlungskraft hervorgerufene
 Verschiebung mittels einer bewegungssensitiven MRT-Sequenz sichtbar gemacht.
 Veränderungen im Elastizitätsmodul des Gewebes können damit dargestellt werden.
 
@@ -527,20 +536,20 @@ Veränderungen im Elastizitätsmodul des Gewebes können damit dargestellt werde
 
 Für unsere Messungen verwenden wir den Siemens
 \textsc{MAGNETOM}\textsuperscript{\textregistered} Avanto \SI{1.5}{\tesla}
-Tomographen der Forschungsgruppe Life \& Brain GmbH. Um den Ultraschall mit der
-bewegungssensitiven Spin-Echo-Sequenz zu synchronisieren wird der in
+Tomographen der Forschungszentrum Life \& Brain GmbH. Um den Ultraschall mit
+der bewegungssensitiven Spin-Echo-Sequenz zu synchronisieren, wird der in
 Abbildung~\ref{fig:elektronik} gezeigte elektronische Aufbau verwendet. Der
-$\piup$-HF-Puls des Tomographen wird mit einer Antenne aufgenommen. Diese
-Signal wird verstärkt gleichgerichtet, integriert und mit einen Diskriminator
+$\piup$-HF-Puls des Tomographen wird mit einer Antenne aufgenommen. Dieses
+Signal wird verstärkt, gleichgerichtet, integriert und mit einen Diskriminator
 und einer Zeit-Logik-Einheit mit einstellbarer Verzögerung als Logikpuls an
 einen Signalgenerator weitergegeben. Dieser erzeugt ein
 \SI{2.5}{\mega\hertz}-Signal, welches über zwei Verstärker in eine
 Sicherheitsbox gegeben wird. Dieser analysiert das Signal und leitet es, bei
 Überschreitung eingestellter Grenzwerte, an einen Widerstand weiter, sodass es
 zu keinen Schädigungen der Probandin kommen kann. Liegt alles innerhalb der
-Grenzwerte wird das Signal an den Emitter weitergegeben. Im Tomographenraum ist
-am BNC-Kabel zum Emitter eine stromkompensierende Drossel angebracht, die die
-Aufgabe hat, Störsignale zu unterdrücken \parencite{diss_radicke}. Vor dem
+Grenzwerte wird das Signal an den Emitter weitergegeben. Im Tomographenraum
+ist am BNC-Kabel zum Emitter eine stromkompensierende Drossel angebracht, die
+die Aufgabe hat, Störsignale zu unterdrücken \parencite{diss_radicke}. Vor dem
 Emitter ist noch eine Impedanzanpassung angebracht, um die Impedanz der
 Piezokeramik an die Ausgangsimpedanz des letzten Verstärkers anzupassen und so
 die Leistungsaufnahme zu maximieren \parencite{dipl_kofahl}.
@@ -563,9 +572,9 @@ elektrischen Kontakt herzustellen wurden Kupferbeschichtungen und Keramik mit
 Silberfädchen verbunden. Ein weiterer Ring wurde an den ersten gelötet und mit
 einem Kupferdeckel verschlossen. Der so entstandene Hohlraum kann über zwei
 Anschlüsse mit Helium zur Kühlung befüllt werden. In die Vertiefung zwischen
-die beiden Ringen wurde die Phase eines BNC-Kabels gelötet, die Masse an den
+die beiden Ringe wurde die Phase eines BNC-Kabels gelötet, die Masse an den
 Kupferdeckel und an die Vorderseite der Piezokeramik. Dadurch ist der Emitter
-Elektromagnetisch abgeschirmt. Auf der Piezokeramik befindet sich eine kokave
+elektromagnetisch abgeschirmt. Auf der Piezokeramik befindet sich eine konkave
 Linse, die den Fokus auf eine Entfernung von $N = \SI{22}{\centi\meter}$
 verschiebt. Dieser hat einen Durchmesser von \SI{4}{\milli\meter} und eine
 Länge von \SI{5}{\centi\meter} \parencite{diss_radicke}.
@@ -573,7 +582,7 @@ Länge von \SI{5}{\centi\meter} \parencite{diss_radicke}.
 \begin{figure}
     \centering
     \includegraphics[width=.8\textwidth]{Abbildungen/emitter.pdf}
-    \caption{(A) Ultraschallemitter. (B) Schematischer Aufbau des Emitters. Kernstück ist die Piezokeramik die über Leiterplatinen an ein BNC-Kabel angeschlossen wird (nach \parencite{dipl_ulucay}).}
+    \caption{(A) Ultraschallemitter. (B) Schematischer Aufbau des Emitters. Kernstück ist die Piezokeramik, die über Leiterplatinen an ein BNC-Kabel angeschlossen wird (nach \parencite{dipl_ulucay}).}
     \label{fig:emitter}
 \end{figure}
 
@@ -607,14 +616,14 @@ Befüllung nicht mehr gelöst wird.
     \centering
     \resizebox{\textwidth}{!}{\input{verschiebevorrichtung.tex}}
     \caption{%
-        Verschiebevorrichtung. Der linke Teil mit PC, Schrittmotoren und Steuerzylindern befindet sich im Kontrollraum. Der rechte Teil liegt in einer mit Wasser gefüllten Wanne im Tomographen-Raum, unter der Liege der Probandin.
+        Verschiebevorrichtung. Der linke Teil mit PC, Schrittmotoren und Steuerzylindern befindet sich im Kontrollraum. Der rechte Teil liegt in einer mit Wasser gefüllten Wanne im Tomographen-Raum, innerhalb der Brustspule, auf der die Probandin liegt.
     }
     \label{fig:aufbau_total}
 \end{figure}
 
-Die Patientin liegt, wie in Abbildung~\ref{fig:aufbau_emitter_spiegel} zu
+Die Probandin liegt, wie in Abbildung~\ref{fig:aufbau_emitter_spiegel} zu
 erkennen ist, mit dem Gesicht nach unten über der Verschiebevorrichtung. Der
-Ultraschall wird vom Emitter waagerecht abgestrahlt und durch den Spiegel in
+Ultraschall wird vom Emitter horizontal abgestrahlt und durch den Spiegel in
 die Vertikale gelenkt, wo er in die Brust einkoppeln kann. Diese befindet sich
 in einer weiteren Wanne, die durch eine Mylar-Folie vom großen Becken getrennt
 ist. So kann einerseits durch Einfüllen warmen Wassers die Messung angenehmer
@@ -626,7 +635,7 @@ aufnimmt.
     \centering
     \resizebox{.9\textwidth}{!}{\input{emitter_spiegel.tikz}}
     \caption{%
-        Position der Patientin über der Verschiebevorrichtung. Die Brustspule ist nicht dargestellt.
+        Position der Probandin über der Verschiebevorrichtung. Die Brustspule ist nicht dargestellt.
     }
     \label{fig:aufbau_emitter_spiegel}
 \end{figure}
@@ -640,7 +649,7 @@ Fokuslänge mehrere Zentimeter beträgt \parencite{dipl_kofahl}.
 \section{Verbesserung der Versuchsvorrichtung}
 
 An der vorhandenen Versuchsvorrichtung bestanden zu Anfang meiner Arbeit einige
-Probleme die es zu verbessern galt. Zum Einen ließen sich die Kolben nach
+Probleme, die es zu verbessern galt. Zum Einen ließen sich die Kolben nach
 einiger Zeit des Stehens nur sehr schwergängig in ihren Zylindern bewegen,
 daher musste man diese vor der Benutzung per Hand lockern, um die
 Schrittmotoren nicht zu überfordern. Zum Anderen trat Luft bei Benutzung der
@@ -651,15 +660,15 @@ Verschiebung nicht mehr stimmte.
 
 Zum Abdichten waren auf den Kolben zwei O-Ringe in jeweils eine Nut
 eingelassen (Abbildung \ref{fig:kolben}). Diese Nuten waren nur minimal
-breiter als die Schnurstärke der Ringe. Befand sich der Kolben nun im Zylinder
+breiter als die Schnurstärke der Ringe. Befand sich der Kolben nun im Zylinder,
 wurden die Ringe stark verformt (Abbildung \ref{fig:nut_schmal}). Die dadurch
 entstehende breite Auflagefläche und starke Rückstellkraft sorgt für hohe
-Reibung. Ist die Nut breiter kann sich der Ring besser verformen (Abbildung
+Reibung. Ist die Nut breiter, kann sich der Ring besser verformen (Abbildung
 \ref{fig:nut_breit}). Wird zudem noch die Nut tiefer gestochen, verringert
 sich die Verformung und damit die Auflagefläche und Rückstellkraft deutlich.
 Die Reibung schrumpft.
 
-Da wir bei unserem Versuchsaufbau mit geringen Drücken zu tun haben, reicht
+Da wir es bei unserem Versuchsaufbau mit geringen Drücken zu tun haben, reicht
 zudem eine Abdichtung mit nur einem O-Ring pro Kolben, statt der vorher
 verwendeten zwei.
 
@@ -694,7 +703,7 @@ verwendeten zwei.
 \end{figure}
 
 Ein weiterer Faktor ist die Wahl des Schmiermittels. Bisher wurde das
-Silikonbasierte \linebreak \emph{Dow~Corning\textsuperscript{\textregistered}
+silikonbasierte \linebreak \emph{Dow~Corning\textsuperscript{\textregistered}
 High~Vacuum~Grease} verwendet. Ich habe mich für eine Verwendung von \linebreak
 \emph{Hochleistungs PTFE-Spray} von Caramba entschieden, da dieses
 auch nach längerem Stehen unter Druck gute Laufeigenschaften hat.
@@ -704,11 +713,11 @@ auch nach längerem Stehen unter Druck gute Laufeigenschaften hat.
 
 Zu Beginn meiner Arbeit wurde die Steckverbindung zur Befüllung der
 Verschiebevorrichtung (vgl. Abbildung~\ref{fig:aufbau_total}, Bauteil 2) durch
-ein einfaches beidseitig konisch zulaufendes Kunststoffbauteil realisiert, auf
+ein einfaches, beidseitig konisch zulaufendes Kunststoffbauteil realisiert, auf
 das die Schläuche von beiden Seiten aufgesteckt werden konnten. Das Problem
 hierbei war, dass diese mit der Zeit ausleierten, sodass die Dichtheit nicht
 mehr gewährleistet werden konnte. Die bisherige Lösung für dieses Problem war,
-die Schläuche ein stück zu kürzen und weiter zu benutzen. Bei einer endlichen
+die Schläuche ein Stück zu kürzen und weiter zu benutzen. Bei einer endlichen
 Schlauchlänge ist das natürlich nicht optimal. Meine Lösung ist in den
 Abbildungen~\ref{fig:steckverbindung_schema} und
 \ref{fig:steckverbindung_foto} zu sehen.
@@ -770,16 +779,16 @@ Abbildungen~\ref{fig:steckverbindung_schema} und
 
     \end{tikzpicture}
     \caption{%
-        Schematische Schnitt durch die Steckverbindungen. Zwei zylinderförmige Aluminiumbauteile werden zusammengesteckt. Durch einen O-Ring am dünneren Teil wird die Verbindung abgedichtet. Die Schläuche sind eingeklebt.
+        Schematischer Schnitt durch die Steckverbindungen. Zwei zylinderförmige Aluminiumbauteile werden zusammengesteckt. Durch einen O-Ring am dünneren Teil wird die Verbindung abgedichtet. Die Schläuche sind eingeklebt.
     }
     \label{fig:steckverbindung_schema}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=.75\textwidth]{Abbildungen/steckverbindung.png}
+    \includegraphics[width=.75\textwidth]{Abbildungen/steckverbindung_hell.png}
     \caption{%
-        Foto der Steckverbindung. Rechts im Bild ist diese einzeln zu sehen, links in einer Aluminiumhalterung, die dafür sorgt, dass die Bauteile beim Verschieben der Kolben nicht auseinander gedrückt werden. Die Flügelmuttern sorgen für ein einfaches Lösen und Schließen der Halterung.
+        Foto der Steckverbindung. Links im Bild ist diese einzeln zu sehen, rechts in einer Aluminiumhalterung, die dafür sorgt, dass die Bauteile beim Verschieben der Kolben nicht auseinander gedrückt werden. Die Flügelmuttern sorgen für ein einfaches Lösen und Schließen der Halterung.
     }
     \label{fig:steckverbindung_foto}
 \end{figure}
@@ -817,7 +826,7 @@ Bildstörungen.
         \centering
         \includegraphics[width=.8\textwidth]{Abbildungen/2014-11-27_19_1_phase.png}
         \caption{%
-            Phasenbild mit US. Da die Phase nur im Bereich 0 bis $2\piup$ Kodiert ist, wird z.B. eine Verschiebung von $\num{2.1}\piup$ als $\num{.1}\piup$ angezeigt und es entstehen schwarz-weiße Phasensprünge.
+            Phasenbild mit US. Da die Phase nur im Bereich 0 bis $2\piup$ kodiert ist, wird z.B. eine Verschiebung von $\num{2.1}\piup$ als $\num{.1}\piup$ angezeigt und es entstehen schwarz-weiße Phasensprünge.
         }
         \label{fig:prob1_phas_US}
     \end{minipage}
@@ -828,7 +837,7 @@ Bildstörungen.
         \centering
         \includegraphics[width=.9\textwidth]{Abbildungen/diff_standart_mask.pdf}
         \caption{%
-            Um Phasensprünge bereinigtes Phasenbild. Die Phasenverschiebung ohne US wurde abgezogen. Die Skala bezeichnet die Zeilen- bzw. Spaltennummer. Die Farbkodierung gibt die Phasenverschiebung in Vielfachen von $2\piup$ an. 
+            Um Phasensprünge bereinigtes Phasenbild. Die Phasenverschiebung ohne US wurde abgezogen. Die Skala bezeichnet die Zeilen- bzw. Spaltennummer. Die Grauwerte geben die Phasenverschiebung in Vielfachen von $2\piup$ an. 
         }
         \label{fig:prob1_unwrapped}
     \end{minipage}
@@ -837,7 +846,7 @@ Bildstörungen.
         \centering
         \includegraphics[width=.9\textwidth]{Abbildungen/dis_standart_lines.pdf}
         \caption{%
-            Gewebeverschiebung. Die Skala bezeichnet die Zeilen- bzw. Spaltennummer. Die Farbkodierung gibt die Gewebeverschiebung in \si{\micro\meter} an. Die Verschiebung entlang der Linien wird im Folgenden genauer betrachtet.
+            Gewebeverschiebung. Die Skala bezeichnet die Zeilen- bzw. Spaltennummer. Die Grauwerte geben die Gewebeverschiebung in \si{\micro\meter} an. Die Verschiebung entlang der Linien wird im Folgenden genauer betrachtet.
         }
         \label{fig:prob1_displacement}
     \end{minipage}
@@ -895,11 +904,11 @@ In Abbildung~\ref{fig:phantom_einzeln} ist das Phasenbild des Phantoms zu
 sehen. Im Phantom selber sind keine Bildstörungen zu erkennen. Im Bildbereich
 darüber kann man einzelne Formen erkennen, die eigentlich nicht in diesem
 Bildabschnitt liegen. Der „Schneesturm“ rechts und links des Phantoms ist Luft
-bzw PMMA. Beide erzeugen in Phasenbildern kein klares Signal. Sobald ein
+bzw. PMMA. Beide erzeugen in Phasenbildern kein klares Signal. Sobald ein
 menschlicher Körper über dem Phantom im Tomographen liegt, entsteht im Bild
 eine waagerechte Linie im Phantom (Abbildung~\ref{fig:phantom_mensch}). Dies
 ist ein Hinweis darauf, dass die Störsignale vom Bereich außerhalb des
-betrachteten Bildausschnitt kommen. Eine Lösung ist die Sättigung eben dieser
+betrachteten Bildausschnitts kommen. Eine Lösung ist die Sättigung eben dieser
 Bereiche. Das sorgt dafür, dass sie bei der Signalaufnahme keine
 Transversalmagnetisierung haben und so kein Signal abgeben. Wird nun der ganze
 Körper in der betrachteten Schicht gesättigt, verschwindet die waagerechte
@@ -934,10 +943,10 @@ Störlinie, wie in Abbildung~\ref{fig:phantom_mensch_sat} zu erkennen ist.
 \subsection{Zweite Messung}
 
 Für die zweite Messung hatte sich eine Probandin mit Zysten in der Brust
-bereit erklärt. Um die Bildstörungen zu unterdrücken sättigten wir nun mit
+bereit erklärt. Um die Bildstörungen zu unterdrücken, sättigten wir nun mit
 mehreren Sättigerpulsen\footnote{Ein einzelner Puls deckt nur einen
 begrenzten, rechteckigen (bzw. quaderförmigen) Bereich ab.} das umliegende
-Gewebe. Das Amplitudenbild ist in Abbildung~\ref{fig:2015-02-27_25_1_amp} das
+Gewebe. Das Amplitudenbild ist in Abbildung~\ref{fig:2015-02-27_25_1_amp}, das
 Phasenbild in Abbildung~\ref{fig:2015-02-27_26_1_phase} zu sehen. Man sieht
 deutlich, dass nach wie vor sowohl im Amplituden- als auch im Phasenbild
 Störungen vorhanden sind. Im Vergleich zur vorherigen Messung ist die einzige
@@ -977,50 +986,50 @@ die Reihenfolge der Sättiger ein Unterschied entsteht.
 
 \subsection{Zweite Fehlersuche}
 
-Um die zweite Brust zu simulieren legten wir eine Flasche gewöhnlichen
+Um die zweite Brust zu simulieren, legten wir eine Flasche gewöhnlichen
 Salatöls in die zweite Brustspule. Um zudem keinen Spalt mehr zwischen
 einem Brustphantom und dem Körper darüber zu haben, legte sich ein
 männlicher Proband derart auf die Brustspule, dass wir so eine weibliche
 Brust simulieren konnten. Im Folgenden zeige ich an den Phasenbildern die
 Verbesserung der Bildqualität durch verschiedene Maßnahmen.
 
-In Abbildung~\ref{fig:2015-03-13_3_1} ist das Phasenbild bei einer
-einfachen transversalen\footnote{Ebene, die durch die Verbindungen
-links-rechts und vorne-hinten aufgespannt wird} Aufnahme ohne Sättiger.
-Zudem sind beide Brustspulen eingeschaltet. Im oberen Bildbereich sind zwei
-Schatten zu erkennen, die durch die Ölflasche verursacht werden. Besser ist
-dies im zugehörigen Amplitudenbild (Abbildung~\ref{fig:2015-03-13_2_1}) zu
-erkennen.  Diese Bildstörung verschwindet jedoch, sobald die zweite
-Brustspule abgeschaltet wird (Abbildung~\ref{fig:2015-03-13_5_1}). Auch im
-Amplitudenbild (Abbildung~\ref{fig:2015-03-13_4_1}) ist sie verschwunden. Nach
-wie vor wird jedoch die Brust mehrfach dargestellt. Ebenso ist rechts im Bild
-eine Struktur zu sehen, die leicht als Fortsetzung der Brust links des
-Bildausschnittes zu identifizieren ist. Dies kann abgeschwächt werden,
-indem man den Bildausschnitt vergrößert. Um zusätzlich dafür zu sorgen, dass
-die zweite Brust (bzw. bei dieser Messung die Ölflasche nicht mehr in der
-untersuchten Schicht liegt, wurde die Aufnahmeschicht von rein transversal in
-Richtung sagittal\footnote{Ebene, die durch die Verbindungen vorne-hinten und
-Kopf-Fuß aufgespannt wird} um \SI{45}{\degree} verkippt. Zudem wurde ein
-Sättiger in Phasenkodierrichtung gelegt. Das Ergebnis ist in
-Abbildung~\ref{fig:2015-03-13_27_1} zu sehen. Die Bildstörung an der
-rechten Bildseite ist veschwunden, die Mehrfachdarstellung der Brust noch
-nicht. Diese kann durch eine Mittelung mit drei Bildern reduziert werden, wie
-in Abbildung~\ref{fig:2015-03-13_29_1} zu sehen ist, aber auch hier gibt es
-sie noch.  Die tatsächliche Brust und die Bildgeister überlappen aber
-nicht mehr so stark, so dass eine Auswertung vereinfacht wird.
+In Abbildung~\ref{fig:2015-03-13_3_1} ist das Phasenbild bei einer einfachen
+transversalen\footnote{Ebene, die durch die Verbindungen links-rechts und
+vorne-hinten aufgespannt wird} Aufnahme ohne Sättiger zu sehen.  Zudem sind
+beide Brustspulen eingeschaltet. Im oberen Bildbereich sind zwei Schatten zu
+erkennen, die durch die Ölflasche verursacht werden. Besser ist dies im
+zugehörigen Amplitudenbild (Abbildung~\ref{fig:2015-03-13_2_1}) zu erkennen.
+Diese Bildstörung verschwindet jedoch, sobald die zweite Brustspule
+abgeschaltet wird (Abbildung~\ref{fig:2015-03-13_5_1}). Auch im Amplitudenbild
+(Abbildung~\ref{fig:2015-03-13_4_1}) ist sie verschwunden. Nach wie vor wird
+jedoch die Brust mehrfach dargestellt. Ebenso ist rechts im Bild eine Struktur
+zu sehen, die leicht als Fortsetzung der Brust links des Bildausschnittes zu
+identifizieren ist. Dies kann abgeschwächt werden, indem man den
+Bildausschnitt vergrößert. Um zusätzlich dafür zu sorgen, dass die zweite
+Brust (bzw. bei dieser Messung die Ölflasche nicht mehr in der untersuchten
+Schicht liegt, wurde die Aufnahmeschicht von rein transversal in Richtung
+sagittal\footnote{Ebene, die durch die Verbindungen vorne-hinten und Kopf-Fuß
+aufgespannt wird} um \SI{45}{\degree} verkippt. Zudem wurde ein Sättiger in
+Phasenkodierrichtung gelegt. Das Ergebnis ist in
+Abbildung~\ref{fig:2015-03-13_27_1} zu sehen. Die Bildstörung an der rechten
+Bildseite ist veschwunden, die Mehrfachdarstellung der Brust noch nicht. Diese
+kann durch eine Mittelung mit drei Bildern reduziert werden, wie in
+Abbildung~\ref{fig:2015-03-13_29_1} zu sehen ist, aber auch hier gibt es sie
+noch.  Die tatsächliche Brust und die Bildgeister überlappen aber nicht mehr
+so stark, so dass eine Auswertung vereinfacht wird.
 
 \begin{figure}[htbp]
     \begin{minipage}[htbp]{.45\textwidth}
         \centering
         \includegraphics[width=.9\textwidth]{Abbildungen/2015-03-13_3_1.png}
-        \caption{Phasenbild. Transversal ohne Sättiger, zwei Spulen.}
+        \caption{Phasenbild. Transversal ohne Sättiger, zwei Spulen. Die Bildstörungen im oberen Bildbereich werden durch die zweite „Brust“ verursacht.}
         \label{fig:2015-03-13_3_1}
     \end{minipage}
     \hfill
     \begin{minipage}[htbp]{.45\textwidth}
         \centering
         \includegraphics[width=.9\textwidth]{Abbildungen/2015-03-13_2_1.png}
-        \caption{Amplitudenbild. Transversal ohne Sättiger, zwei Spulen.}
+        \caption{Amplitudenbild. Transversal ohne Sättiger, zwei Spulen. Die Bildstörungen im oberen Bildbereich werden durch die zweite „Brust“ verursacht.}
         \label{fig:2015-03-13_2_1}
     \end{minipage}
 \end{figure}
@@ -1030,14 +1039,18 @@ nicht mehr so stark, so dass eine Auswertung vereinfacht wird.
     \begin{minipage}[htbp]{.45\textwidth}
         \centering
         \includegraphics[width=.9\textwidth]{Abbildungen/2015-03-13_5_1.png}
-        \caption{Phasenbild. Transversal ohne Sättiger, eine Spule.}
+        \caption{%
+            Phasenbild. Transversal ohne Sättiger, eine Spule. Die Geister im oberen Bildbereich sind nicht mehr zu sehen. Starke Bildstörung an der rechten Bildseite.
+        }
         \label{fig:2015-03-13_5_1}
     \end{minipage}
     \hfill
     \begin{minipage}[htbp]{.45\textwidth}
         \centering
         \includegraphics[width=.9\textwidth]{Abbildungen/2015-03-13_4_1.png}
-    \caption{Amplitudenbild. Transversal ohne Sättiger, eine Spule.}
+    \caption{%
+        Amplitudenbild. Transversal ohne Sättiger, eine Spule. Die Geister im oberen Bildbereich sind nicht mehr zu sehen. Starke Bildstörung an der rechten Bildseite.
+    }
         \label{fig:2015-03-13_4_1}
     \end{minipage}
 \end{figure}
@@ -1046,14 +1059,14 @@ nicht mehr so stark, so dass eine Auswertung vereinfacht wird.
     \begin{minipage}[htbp]{.45\textwidth}
         \centering
         \includegraphics[width=.9\textwidth]{Abbildungen/2015-03-13_27_1.png}
-        \caption{Phasenbild. Transversal nach sagittal um \SI{45}{\degree} verkippt, ein Sättiger, eine Spule. Einzelnes Bild.}
+        \caption{Phasenbild. Transversal nach sagittal um \SI{45}{\degree} verkippt, ein Sättiger, eine Spule. Vergrößerter Bildausschnitt. Einzelnes Bild. Die Störung am rechten Bildrand wird unterdrückt.}
         \label{fig:2015-03-13_27_1}
     \end{minipage}
     \hfill
     \begin{minipage}[htbp]{.45\textwidth}
         \centering
         \includegraphics[width=.9\textwidth]{Abbildungen/2015-03-13_29_1.png}
-    \caption{Phasenbild. Transversal nach sagittal um \SI{45}{\degree} verkippt, ein Sättiger, eine Spule. 3 Mittelungen.}
+    \caption{Phasenbild. Transversal nach sagittal um \SI{45}{\degree} verkippt, ein Sättiger, eine Spule. Vergrößerter Bildausschnitt. 3 Mittelungen. Die Mehrfachdarstellung der Brust wird reduziert.}
         \label{fig:2015-03-13_29_1}
     \end{minipage}
 \end{figure}
@@ -1063,8 +1076,8 @@ nicht mehr so stark, so dass eine Auswertung vereinfacht wird.
     In meiner Arbeit habe ich mich mit einer Methode beschäftigt, mit der
     Veränderungen der Elastizität von Gewebe durch Ultraschall und MRT
     sichtbar gemacht werden können. Diese nutzt aus, dass das Gewebe durch
-    Ultraschallstrahlungsdruck augelenkt wird und die Auslenkung
-    antiproportional zum Elastizitätsmodul ist. Mit einer Bewegungssensitiven
+    Ultraschallstrahlungskraft augelenkt wird und die Auslenkung
+    antiproportional zum Elastizitätsmodul ist. Mit einer bewegungssensitiven
     MRT-Sequenz kann die Auslenkung von einigen Mikrometern sichtbar gemacht
     werden. In einer Studie soll an Brustkrebspatientinnen mit gesichterm
     Befund überprüft werden, ob dieses Verfahren helfen kann, die
@@ -1078,14 +1091,14 @@ nicht mehr so stark, so dass eine Auswertung vereinfacht wird.
     Handhabung erschwerten. Zum einen setzten sich die Kolben in den
     Verschiebezylinden immer wieder fest. Dies konnte ich durch Verbreiterung
     und Vertiefung der Dichtungsnuten, sowie durch die Wahl eines PTFE-Sprays
-    als Schmiermittel lösen. Zum wurde die Steckverbindung, die für eine
-    Befüllung der Vorrichtung notwendig ist, mit der Zeit undicht. Daher
+    als Schmiermittel lösen. Zum anderen wurden die Steckverbindungen, die für
+    eine Befüllung der Vorrichtung notwendig sind, mit der Zeit undicht. Daher
     entwickelte ich eine Steckverbindung, die durch Aluminiumbauteile
     zuverlässig stabil bleibt.
     
     Es ist noch zu überprüfen, ob durch die Änderungen an der
     Verschiebevorrichtung das Eindringen von Luft verhindert wird. Ist dies
-    der Fall müsste sie nicht vor jeder Benutzung erneut befüllt werden und
+    der Fall, müsste sie nicht vor jeder Benutzung erneut befüllt werden und
     man könnte sich überlegen, statt Wasser eine andere Flüssigkeit zu
     benutzen, die von durch ihre Eigenschaften, wie zum Beispiel der
     Lösbarkeit von Luft, besser geeignet ist.
@@ -1098,8 +1111,8 @@ nicht mehr so stark, so dass eine Auswertung vereinfacht wird.
     Da die Störungen nicht vollständig behoben werden konnten, muss an einer
     Probandin überprüft werden, ob die Bildqualität für eine Auswertung
     ausreichend ist. Für eine Verbesserung könnte noch überprüft werden, ob
-    eine weitere Vergrößerung des Bildausschnittes eine weitere
-    Störungsreduktion verursacht, dabei aber nicht zu viel Auflösung verliert.
+    eine weitere Vergrößerung des Bildausschnittes eine zusätzliche
+    Störungsreduktion verursacht, ohne zu viel Auflösung im Bild zu verlieren.
     Zudem könnte noch überprüft werden, ob eine andere Sequenz geeigneter ist.
 
 
