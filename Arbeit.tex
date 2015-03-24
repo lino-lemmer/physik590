@@ -121,7 +121,8 @@ strömen seitlich Teilchen nach. Da die Teilchen stärker weggestoßen als
 zurückgezogen werden, wird so eine Strömung in Ausbreitungsrichtung des
 (Ultra-)schalls erzeugt, die einen Druck auf nachfolgende Teilchen hervorruft.
 Durch diesen \emph{Schallstrahlungsdruck} wird eine messbare Kraft ausgeübt,
-daher spricht man auch von \emph{Schallstrahlungskraft}. 
+daher spricht man auch von \emph{Schallstrahlungskraft}. Diese ist zur
+Intensität und zu Absorbtion im Gewebe proportional.
 
 In elastischem Material, wie menschlichem Gewebe, stellt sich nach einigen
 Millisekunden durch das Gleichgewicht von Schallstrahlungs- und
@@ -151,9 +152,11 @@ die Frequenz der Wechselspannung ausreichend hoch, entsteht Ultraschall.
 
 Das Schallfeld eines kreisförmigen Ultraschallemitters kann man in zwei Bereiche aufteilen (vgl. Abbildung~\ref{fig:us-feld}). Im Nahfeld kommt es durch Interferenz zu starken Intensitätsschwankungen. Im Fernfeld kommt es zu einer Strahlaufweitung, wodurch die Intensität sinkt. Dazwischen liegt der Fokus, in dem die Intensität gebündelt wird. Der Abstand $N$ zwischen Emitter und Fokusbereich ist
 \[
-    N = \frac{D^2}{4\lambda}.
+    N = \frac{D^2}{4\lambda},
 \]
-Dieser Abstand kann durch den Einsatz einer Linse verringert werden.
+mit dem Durchmesser $D$ des Emitters und der emittierten Wellenlänge
+$\lambda$. Dieser Abstand kann durch den Einsatz einer Linse verringert
+werden.
 
 \begin{figure}[htbp]
     \centering
@@ -606,11 +609,11 @@ ermöglicht. Erst durch das Wasser kann sich der Ultraschall mit einer Frequenz
 von \SI{2.5}{\mega\hertz} ausbreiten. In Luft ist dies nicht möglich. Zudem
 wird die Reflektion beim Übergang zur Brust dadurch möglichst klein gehalten.
 
-Da in der Wand zwischen Kontroll- und MRT-Raum nur zwei Löcher mit wenigen
-Zentimetern Durchmesser zu Verfügung stehen, sind die Schläuche mit
-tropffreien Kupplungen versehen. Um dennoch eine Wiederbefüllung zu ermöglichen
-gibt es an jedem Schlauch noch eine einfache Steckverbindung, die nach der
-Befüllung nicht mehr gelöst wird.
+Da in der Wand zwischen Kontroll- und MRT-Raum nur zwei elektromagnetisch
+abgeschirmte Bohrungen mit \SI{50}{\milli\meter} Durchmesser zu Verfügung
+stehen, sind die Schläuche mit tropffreien Kupplungen versehen. Um dennoch
+eine Wiederbefüllung zu ermöglichen gibt es an jedem Schlauch noch eine
+einfache Steckverbindung, die nach der Befüllung nicht mehr gelöst wird.
 
 \begin{figure}[htbp]
     \centering
@@ -639,10 +642,6 @@ aufnimmt.
     }
     \label{fig:aufbau_emitter_spiegel}
 \end{figure}
-
-Der Zylinder, der den Abstand zwischen Emitter und Spiegel variieren kann und
-somit den Fokus in der Vertikalen verschiebt, ist nicht notwendig, da die
-Fokuslänge mehrere Zentimeter beträgt \parencite{dipl_kofahl}.
 
 \chapter{Durchführung}
 
@@ -1079,7 +1078,7 @@ so stark, so dass eine Auswertung vereinfacht wird.
     Ultraschallstrahlungskraft augelenkt wird und die Auslenkung
     antiproportional zum Elastizitätsmodul ist. Mit einer bewegungssensitiven
     MRT-Sequenz kann die Auslenkung von einigen Mikrometern sichtbar gemacht
-    werden. In einer Studie soll an Brustkrebspatientinnen mit gesichterm
+    werden. In einer Studie soll an Brustkrebspatientinnen mit gesichertem
     Befund überprüft werden, ob dieses Verfahren helfen kann, die
     Brustkrebsdiagnose zu verbessern. Um den Ultraschall dabei an der
     richtigen Stelle in die Brust einzukoppeln wurde eine
@@ -1100,8 +1099,9 @@ so stark, so dass eine Auswertung vereinfacht wird.
     Verschiebevorrichtung das Eindringen von Luft verhindert wird. Ist dies
     der Fall, müsste sie nicht vor jeder Benutzung erneut befüllt werden und
     man könnte sich überlegen, statt Wasser eine andere Flüssigkeit zu
-    benutzen, die von durch ihre Eigenschaften, wie zum Beispiel der
-    Lösbarkeit von Luft, besser geeignet ist.
+    benutzen. Öl hätte hier zum Beispiel den Vorteil, dass, wegen
+    schlechter Löslichkeit von Luft, Bläschenbildung kein Problem mehr 
+    wäre.
 
     Bei einer ersten Messung an einer Probandin fielen starke Bildstörungen
     auf, die eine vernünftige Auswertung unmöglich machten. Diese Störungen
